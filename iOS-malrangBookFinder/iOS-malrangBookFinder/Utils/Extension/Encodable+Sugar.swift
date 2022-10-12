@@ -9,14 +9,14 @@ import Foundation
 
 extension Encodable {
     func toDictionary() -> Result<[String: Any], NetworkError> {
-        do {
-            let jsonData = try Json.encoder.encode(self)
-            guard let dictionaryData = try JSONSerialization.jsonObject(with: jsonData) as? [String: Any] else {
-                return .failure(.decodeError)
-            }
-            return .success(dictionaryData)
-        } catch {
-            return .failure(.decodeError)
+        guard let jsonData = try? Json.encoder.encode(self) else {
+            return .failure(.encodeError)
         }
+
+        guard let dictionaryData = try? JSONSerialization.jsonObject(with: jsonData) as? [String: Any] else {
+            return .failure(.encodeError)
+        }
+
+        return .success(dictionaryData)
     }
 }

@@ -14,6 +14,7 @@ enum NetworkError: LocalizedError {
     case urlError
     case emptyDataError
     case decodeError
+    case encodeError
     case responseError
 
     var errorDescription: String {
@@ -30,6 +31,8 @@ enum NetworkError: LocalizedError {
             return "data가 비어있습니다."
         case .decodeError:
             return "decode 에러가 발생했습니다."
+        case .encodeError:
+            return "encode 에러가 발생했습니다."
         case .responseError:
             return "response 수신을 실패 했습니다."
         }
