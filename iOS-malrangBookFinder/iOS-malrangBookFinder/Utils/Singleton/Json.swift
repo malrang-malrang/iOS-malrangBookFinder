@@ -9,6 +9,7 @@ import Foundation
 
 struct Json {
     static let encoder = JSONEncoder()
+    static let decoder = JSONDecoder()
 
     private init() {}
 }
