@@ -1,0 +1,865 @@
+{
+    "kind": "books#volumes",
+    "totalItems": 1355,
+    "items": [
+        {
+            "kind": "books#volume",
+            "id": "pKNQAAAAMAAJ",
+            "etag": "nAj/cH9Ob80",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/pKNQAAAAMAAJ",
+            "volumeInfo": {
+                "title": "Tutorial Hard Real-time Systems",
+                "authors": [
+                    "John A. Stankovic",
+                    "Krithi Ramamritham"
+                ],
+                "publishedDate": "1988",
+                "industryIdentifiers": [
+                    {
+                        "type": "OTHER",
+                        "identifier": "UOM:39015019594426"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 632,
+                "printType": "BOOK",
+                "categories": [
+                    "Computer programming"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.6.4.0.preview.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=pKNQAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=pKNQAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.co.kr/books?id=pKNQAAAAMAAJ&q=time&dq=time&hl=&cd=1&source=gbs_api",
+                "infoLink": "http://books.google.co.kr/books?id=pKNQAAAAMAAJ&dq=time&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Tutorial_Hard_Real_time_Systems.html?hl=&id=pKNQAAAAMAAJ"
+            },
+            "saleInfo": {
+                "country": "KR",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "KR",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=pKNQAAAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Liu, C.L. and Layland, J. Scheduling Algorithms for Multiprogramming in a Hard Real-<b>Time</b> Environment. Journal of the ACM 20(1):46-61, 1973. Liu, C.L. Deterministic Job Scheduling in Computing Systems. Modeling and Performance Evaluation&nbsp;..."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "zYQpAQAAMAAJ",
+            "etag": "lA2QUMXQ4ko",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/zYQpAQAAMAAJ",
+            "volumeInfo": {
+                "title": "Monitoring and Debugging of Distributed Real-time Systems",
+                "authors": [
+                    "Jeffrey J.-P. Tsai",
+                    "Steve J. H. Yang"
+                ],
+                "publisher": "IEEE Computer Society",
+                "publishedDate": "1995",
+                "industryIdentifiers": [
+                    {
+                        "type": "OTHER",
+                        "identifier": "UOM:39076001536403"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 446,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.2.1.0.preview.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=zYQpAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=zYQpAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.co.kr/books?id=zYQpAQAAMAAJ&q=time&dq=time&hl=&cd=2&source=gbs_api",
+                "infoLink": "http://books.google.co.kr/books?id=zYQpAQAAMAAJ&dq=time&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Monitoring_and_Debugging_of_Distributed.html?hl=&id=zYQpAQAAMAAJ"
+            },
+            "saleInfo": {
+                "country": "KR",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "KR",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=zYQpAQAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "It also provides the mechanisms for asynchronous or synchronous monitoring of those constraints at run-<b>time</b>. Despite extensive work on monitoring and debugging facilities for parallel and distributed systems, run-<b>time</b> monitoring of&nbsp;..."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "Io5VAAAAMAAJ",
+            "etag": "emuqQ/SI2QI",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/Io5VAAAAMAAJ",
+            "volumeInfo": {
+                "title": "Euromicro Workshop on Real Time",
+                "subtitle": "Proceedings",
+                "publisher": "IEEE Computer Society",
+                "publishedDate": "1989",
+                "description": "Proceedings of the Euromicro Workshop on Real-Time, held in Como, Italy, June 1989. Among the topics addressed: concepts and definitions, languages, architectures, timing analysis, industrial control, scheduling, testing and fault tolerance. No index. Annotation copyrighted by Book News, Inc., Portland, OR.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0818619562"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780818619564"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 227,
+                "printType": "BOOK",
+                "categories": [
+                    "Real-time data processing"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.3.4.0.preview.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=Io5VAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=Io5VAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.co.kr/books?id=Io5VAAAAMAAJ&q=time&dq=time&hl=&cd=3&source=gbs_api",
+                "infoLink": "http://books.google.co.kr/books?id=Io5VAAAAMAAJ&dq=time&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Euromicro_Workshop_on_Real_Time.html?hl=&id=Io5VAAAAMAAJ"
+            },
+            "saleInfo": {
+                "country": "KR",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "KR",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=Io5VAAAAMAAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "3 The Experimental Run - <b>Time</b> System classes , see Figure 3 . For the execution of SA / RT specifications only one additional class has been added : <b>Time</b> class , which contains access methods for timer services ."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "bAmJDQAAQBAJ",
+            "etag": "mZkd7S/Hy2E",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/bAmJDQAAQBAJ",
+            "volumeInfo": {
+                "title": "타임 시커 Time Seeker",
+                "subtitle": "시간을 그리는 아이",
+                "authors": [
+                    "이남석"
+                ],
+                "publisher": "작은길",
+                "publishedDate": "2016-11-21",
+                "description": "이남석 지식소설, 타임 시커Time Seeker 내 안에서 생동하는 시간을 발견하게 해주는 놀라운 이야기 ‘지식소설’이라는 독특한 장르를 개척하여 청소년 독자들로부터 폭넓게 사랑받고 있는 이남석 작가의 신작. 이번에는 ‘시간’이라는 묵직하면서도 절실한 삶의 테마를 선택했다. 한국인만큼 바쁜 생활리듬을 가진 사람들이 있을까. 우리 청소년만큼 ‘지금’이라는 시간을 맘껏 누리지 못한 채, 알 수 없는 핑크빛 미래를 위해 살도록 강요받는 청춘이 또 있을까. 불행히도 시간에 예속되는 나이마저 점점 어려지고 있는 게 현실이다. 그렇다면 우리가 오래도록 미뤄 왔던 질문을 이제 본격적으로 던져봐야 하지 않을까. 도대체 시간은 뭘까? 시간은 우리에게 어떤 의미가 있을까? 시간이 정말 존재하기는 하는 걸까? 반대로 시간이 사라진다면 이 세상과 모든 존재 역시 한순간에 사라져버리는 걸까? ‘시간을 그리는 아이’ 규린의 이야기는 더 이상 미룰 수 없는 우리 모두의 질문을 대신하여 시간의 본질과 의미를 깊이 있게 탐색해 들어간 8박 9일의 여행 기록이자 철학적 사색의 결실이라 할 수 있을 것이다.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9788998066666"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "8998066661"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 328,
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "1.1.1.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=bAmJDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=bAmJDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "ko",
+                "previewLink": "http://books.google.co.kr/books?id=bAmJDQAAQBAJ&pg=PT378&dq=time&hl=&cd=4&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=bAmJDQAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=bAmJDQAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "KR",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 10150,
+                    "currencyCode": "KRW"
+                },
+                "retailPrice": {
+                    "amount": 9135,
+                    "currencyCode": "KRW"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=bAmJDQAAQBAJ&rdid=book-bAmJDQAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 10150000000,
+                            "currencyCode": "KRW"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 9135000000,
+                            "currencyCode": "KRW"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "KR",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.co.kr/books/download/%ED%83%80%EC%9E%84_%EC%8B%9C%EC%BB%A4_Time_Seeker-sample-epub.acsm?id=bAmJDQAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.co.kr/books/download/%ED%83%80%EC%9E%84_%EC%8B%9C%EC%BB%A4_Time_Seeker-sample-pdf.acsm?id=bAmJDQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=bAmJDQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "“<b>Time</b> Discounting and <b>Time</b> Preference: A Critical Review”.Journal of Economic Literature 40(2), 351~401 ○ Green, L., Fry, A. F., &amp; Myerson, J. (1994).“Discounting of delayed rewards: A life span comparison”.Psychological Science 5(1),&nbsp;..."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "KFHeDQAAQBAJ",
+            "etag": "4Y6U/hsQXdk",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/KFHeDQAAQBAJ",
+            "volumeInfo": {
+                "title": "트럼프, 강한 미국을 꿈꾸다 TIME TO GET TOUGH",
+                "subtitle": "트럼프가 직접 쓴 ‘아메리카 퍼스트’를 위한 제언",
+                "authors": [
+                    "도널드 트럼프 "
+                ],
+                "publisher": "미래의 창",
+                "publishedDate": "2017-01-09",
+                "description": "트럼프가 직접 말하는 ‘강한 미국’의 청사진 미국의 국익을 최우선에 두는 ‘아메리카 퍼스트’, 그 실체를 조목조목 밝히는 새로운 미국의 로드맵 미국 45대 대통령 당선자, 트럼프가 직접 쓴 정책집. 외교, 군사, 교육, 의료, 이민문제 등, 대선 기간 내내 논란을 불러온 그의 정책과 생각을 제대로 들을 수 있다. 사업가가 아니라 정치인이자 대선 후보로서 자신의 정견을 직접 밝힌 이 책에서 그는 미국의 문제가 무엇이며, 오바마 행정부는 왜 비판을 받아야 하는지, 미국은 왜 과거의 영광을 잃었으며, 미국인들이 왜 일자리를 잃어야 했는지, 이민자들이 어떻게 미국의 국경을 어지럽히고 있는지, 지금 미국 아이들의 미래가 왜 어두운지, 왜 많은 미국인들이 빚에 허덕이고 있으며, 중국이 미국의 희생으로 어떤 이득을 취하고 있는지를 강력하게 비판하며 그 해법을 제시하고 있다. 선거 내내 화제를 낳은 트럼프 특유의 직설은 이 책의 특징이기도 하다. 그는 거침이 없고 신랄하다. 무언가를 공격할 때도 주저하지 않는다. 그가 왜 앵그리 화이트의 전폭적인 지지를 받을 수 있었는지 이 책은 그 답을 주고 있다.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9788959894383"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "8959894389"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Political Science"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.1.1.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=KFHeDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=KFHeDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "ko",
+                "previewLink": "http://books.google.co.kr/books?id=KFHeDQAAQBAJ&pg=PT317&dq=time&hl=&cd=5&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=KFHeDQAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=KFHeDQAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "KR",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 9800,
+                    "currencyCode": "KRW"
+                },
+                "retailPrice": {
+                    "amount": 8820,
+                    "currencyCode": "KRW"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=KFHeDQAAQBAJ&rdid=book-KFHeDQAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 9800000000,
+                            "currencyCode": "KRW"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 8820000000,
+                            "currencyCode": "KRW"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "KR",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.co.kr/books/download/%ED%8A%B8%EB%9F%BC%ED%94%84_%EA%B0%95%ED%95%9C_%EB%AF%B8%EA%B5%AD%EC%9D%84_%EA%BF%88%EA%BE%B8%EB%8B%A4_TIM-sample-epub.acsm?id=KFHeDQAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.co.kr/books/download/%ED%8A%B8%EB%9F%BC%ED%94%84_%EA%B0%95%ED%95%9C_%EB%AF%B8%EA%B5%AD%EC%9D%84_%EA%BF%88%EA%BE%B8%EB%8B%A4_TIM-sample-pdf.acsm?id=KFHeDQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=KFHeDQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "6 Peter Navarro, &quot;How China unfairly bests the U.S.,” Los Angeles <b>Times</b>, June 21, 2011, http://articles.latimes.com/2011/jun/21/opinion/ia-oe-navarro-tradechina-20110621. 7 |bid. 8 John Hechinger, &quot;U.S. Teens Lagas China Soars on&nbsp;..."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "uyUSEAAAQBAJ",
+            "etag": "BkwlRORfLog",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/uyUSEAAAQBAJ",
+            "volumeInfo": {
+                "title": "Once Upon A Time",
+                "authors": [
+                    "CHAE WON YOON"
+                ],
+                "publisher": "인사이트브리즈",
+                "publishedDate": "2020-11-30",
+                "description": "Once upon a time, there lived a witch. She was spending happy days with her only friend, the black cat. The life of a small house in the deep forest away from the village was very peaceful. Her house was covered with beautiful flowers, but the door was always tightly locked. Then, she happened to meet a child who got lost. Maybe it's because other people did not have favorite eyes on her. The witch introduces herself to this child as a fairy. The witch cared for the child very much, but the cat was very cautious. But one day, a mountain animal came down and the cat got hurt and failed to protect the child. It wasn't a very serious wound, so it was healed by the power of the witch, but since then, the relationship between the cat and the child had improved. The child was about to grow up and become an adult. The witch left the forest to buy a gift for the child to the village, where she and her parents were kicked out. And then they got caught and they ended up in human hands...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9791186142585"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Literary Collections"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=uyUSEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=uyUSEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "ko",
+                "previewLink": "http://books.google.co.kr/books?id=uyUSEAAAQBAJ&pg=PT13&dq=time&hl=&cd=6&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=uyUSEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=uyUSEAAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "KR",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 1000,
+                    "currencyCode": "KRW"
+                },
+                "retailPrice": {
+                    "amount": 900,
+                    "currencyCode": "KRW"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=uyUSEAAAQBAJ&rdid=book-uyUSEAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 1000000000,
+                            "currencyCode": "KRW"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 900000000,
+                            "currencyCode": "KRW"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "KR",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.co.kr/books/download/Once_Upon_A_Time-sample-epub.acsm?id=uyUSEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.co.kr/books/download/Once_Upon_A_Time-sample-pdf.acsm?id=uyUSEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=uyUSEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "You have grabbed humans because of petty attachment every <b>time</b>.” I gave him a smile with my eyes and snuggled my face into his fur. Joe was extremely surprised and jumped out of the bed. Then he brushed his ears with his paw several&nbsp;..."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "GSMVEAAAQBAJ",
+            "etag": "Ke7QPFLAk5U",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/GSMVEAAAQBAJ",
+            "volumeInfo": {
+                "title": "타임 투 초콜릿(Time to Chocolate) 3권",
+                "authors": [
+                    "도깨비이빨"
+                ],
+                "publisher": "페르마타",
+                "publishedDate": "2021-02-04",
+                "description": "*본 작품에는 폭력 피해 및 유혈 묘사가 포함되어 있습니다. 구매에 참고하여 주시길 바랍니다. *작품 내 외국어의 용법에 다소 맞지 않는 표현이 있을 수 있습니다. *소설 속 등장하는 인물, 브랜드, 레시피 및 장소는 허구임을 밝힙니다. 세르클 거리 121번지와 124번지 사이. 장미 덤불을 따라 기타 소리가 들리는 노란 벽돌 광장 쪽으로 걸으면 나타나는 초콜릿 가게, * * * “그냥 죽어 버리지 그랬어.” 서른을 앞둔 동갑내기 커플 발렌과 로셰. 우연한 사고로 발렌에게 로셰와의 기억이 사라진다. 그리고 아무리 기다려도 연인의 기억이 돌아오지 않자, 로셰는 이별을 결심했다. ‘네가 나한테, 내가 너한테 얼마나 마음을 끓였는지, 어떤 사랑을 했는지 아무것도 모르는데.’ 로셰와 헤어지고 일상을 살아가는 발렌. 하지만 발렌의 영화사의 맞은편인 로셰의 쇼콜라트리 때문인지, 계속 로셰가 눈에 밟히는데……. 미리보기 “왜 자꾸 밀어? 애인도 못 알아봐?” “애인? 네가? 미쳤군.” 로셰가 휘두른 주먹이 그대로 잡혔다. 싸움이 나려 하면 폭삭 끌어안아 무마하던 발렌이 아니었다. 따스함은 어딜 가고 건조함만이 가득한 시선이었다. 로셰를 향해 소담스럽게 피우던 수국색 눈동자가 봉오리를 피우지 않고 고요하고 낯설게 머물렀다. 이상했다. 눈빛이 탁하면 잠이 덜 깼냐고 묻기라도 할 텐데. 억센 손아귀에 잡힌 로셰의 팔이 저릿하게 감각을 잃어 가도 발렌은 날 선 태도를 고수했다. 서늘한 작업실의 온도에 적응된 로셰에게도 연인의 눈은 차다 못해 너무 시렸다. 발렌이 아닌 것처럼. “거짓말 마. 난 남자 안 좋아해.” 진짜로, 발렌이 아닌가 보다.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9791101792963"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction"
+                ],
+                "maturityRating": "MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.1.1.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=GSMVEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=GSMVEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "ko",
+                "previewLink": "http://books.google.co.kr/books?id=GSMVEAAAQBAJ&pg=PT1&dq=time&hl=&cd=7&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=GSMVEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=GSMVEAAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "KR",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 3500,
+                    "currencyCode": "KRW"
+                },
+                "retailPrice": {
+                    "amount": 3150,
+                    "currencyCode": "KRW"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=GSMVEAAAQBAJ&rdid=book-GSMVEAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 3500000000,
+                            "currencyCode": "KRW"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 3150000000,
+                            "currencyCode": "KRW"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "KR",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.co.kr/books/download/%ED%83%80%EC%9E%84_%ED%88%AC_%EC%B4%88%EC%BD%9C%EB%A6%BF_Time_to_Chocolate_3-sample-epub.acsm?id=GSMVEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=GSMVEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "도깨비이빨. <b>타임</b> 투 초콜릿(<b>Time</b> to Chocolate) 3권 (완결) <b>타임</b> 투 초콜릿(<b>Time</b> to Chocolate) 3권 (완결) 전자책 발행 |"
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "FSMVEAAAQBAJ",
+            "etag": "701UuhDA+mU",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/FSMVEAAAQBAJ",
+            "volumeInfo": {
+                "title": "타임 투 초콜릿(Time to Chocolate) 1권",
+                "authors": [
+                    "도깨비이빨"
+                ],
+                "publisher": "페르마타",
+                "publishedDate": "2021-02-04",
+                "description": "*본 작품에는 폭력 피해 및 유혈 묘사가 포함되어 있습니다. 구매에 참고하여 주시길 바랍니다. *작품 내 외국어의 용법에 다소 맞지 않는 표현이 있을 수 있습니다. *소설 속 등장하는 인물, 브랜드, 레시피 및 장소는 허구임을 밝힙니다. 세르클 거리 121번지와 122번지 사이. 장미 덤불을 따라 기타 소리가 들리는 노란 벽돌 광장 쪽으로 걸으면 나타나는 초콜릿 가게, * * * “그냥 죽어 버리지 그랬어.” 서른을 앞둔 동갑내기 커플 발렌과 로셰. 우연한 사고로 발렌에게 로셰와의 기억이 사라진다. 그리고 아무리 기다려도 연인의 기억이 돌아오지 않자, 로셰는 이별을 결심했다. ‘네가 나한테, 내가 너한테 얼마나 마음을 끓였는지, 어떤 사랑을 했는지 아무것도 모르는데.’ 로셰와 헤어지고 일상을 살아가는 발렌. 하지만 발렌의 영화사의 맞은편인 로셰의 쇼콜라트리 때문인지, 계속 로셰가 눈에 밟히는데……. 미리보기 “왜 자꾸 밀어? 애인도 못 알아봐?” “애인? 네가? 미쳤군.” 로셰가 휘두른 주먹이 그대로 잡혔다. 싸움이 나려 하면 폭삭 끌어안아 무마하던 발렌이 아니었다. 따스함은 어딜 가고 건조함만이 가득한 시선이었다. 로셰를 향해 소담스럽게 피우던 수국색 눈동자가 봉오리를 피우지 않고 고요하고 낯설게 머물렀다. 이상했다. 눈빛이 탁하면 잠이 덜 깼냐고 묻기라도 할 텐데. 억센 손아귀에 잡힌 로셰의 팔이 저릿하게 감각을 잃어 가도 발렌은 날 선 태도를 고수했다. 서늘한 작업실의 온도에 적응된 로셰에게도 연인의 눈은 차다 못해 너무 시렸다. 발렌이 아닌 것처럼. “거짓말 마. 난 남자 안 좋아해.” 진짜로, 발렌이 아닌가 보다.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9791101792949"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction"
+                ],
+                "maturityRating": "MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.1.1.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=FSMVEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=FSMVEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "ko",
+                "previewLink": "http://books.google.co.kr/books?id=FSMVEAAAQBAJ&pg=PT1&dq=time&hl=&cd=8&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=FSMVEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=FSMVEAAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "KR",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 3500,
+                    "currencyCode": "KRW"
+                },
+                "retailPrice": {
+                    "amount": 3150,
+                    "currencyCode": "KRW"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=FSMVEAAAQBAJ&rdid=book-FSMVEAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 3500000000,
+                            "currencyCode": "KRW"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 3150000000,
+                            "currencyCode": "KRW"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "KR",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.co.kr/books/download/%ED%83%80%EC%9E%84_%ED%88%AC_%EC%B4%88%EC%BD%9C%EB%A6%BF_Time_to_Chocolate_1-sample-epub.acsm?id=FSMVEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=FSMVEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "도깨비이빨. <b>타임</b> 투 초콜릿(<b>Time</b> to Chocolate) 1권 <b>타임</b> 투 초콜릿(<b>Time</b> to Chocolate) 1권 전자책 발행 | 2020년."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "FyMVEAAAQBAJ",
+            "etag": "6jo2NcqRTIs",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/FyMVEAAAQBAJ",
+            "volumeInfo": {
+                "title": "타임 투 초콜릿(Time to Chocolate) 2권",
+                "authors": [
+                    "도깨비이빨"
+                ],
+                "publisher": "페르마타",
+                "publishedDate": "2021-02-04",
+                "description": "*본 작품에는 폭력 피해 및 유혈 묘사가 포함되어 있습니다. 구매에 참고하여 주시길 바랍니다. *작품 내 외국어의 용법에 다소 맞지 않는 표현이 있을 수 있습니다. *소설 속 등장하는 인물, 브랜드, 레시피 및 장소는 허구임을 밝힙니다. 세르클 거리 121번지와 123번지 사이. 장미 덤불을 따라 기타 소리가 들리는 노란 벽돌 광장 쪽으로 걸으면 나타나는 초콜릿 가게, * * * “그냥 죽어 버리지 그랬어.” 서른을 앞둔 동갑내기 커플 발렌과 로셰. 우연한 사고로 발렌에게 로셰와의 기억이 사라진다. 그리고 아무리 기다려도 연인의 기억이 돌아오지 않자, 로셰는 이별을 결심했다. ‘네가 나한테, 내가 너한테 얼마나 마음을 끓였는지, 어떤 사랑을 했는지 아무것도 모르는데.’ 로셰와 헤어지고 일상을 살아가는 발렌. 하지만 발렌의 영화사의 맞은편인 로셰의 쇼콜라트리 때문인지, 계속 로셰가 눈에 밟히는데……. 미리보기 “왜 자꾸 밀어? 애인도 못 알아봐?” “애인? 네가? 미쳤군.” 로셰가 휘두른 주먹이 그대로 잡혔다. 싸움이 나려 하면 폭삭 끌어안아 무마하던 발렌이 아니었다. 따스함은 어딜 가고 건조함만이 가득한 시선이었다. 로셰를 향해 소담스럽게 피우던 수국색 눈동자가 봉오리를 피우지 않고 고요하고 낯설게 머물렀다. 이상했다. 눈빛이 탁하면 잠이 덜 깼냐고 묻기라도 할 텐데. 억센 손아귀에 잡힌 로셰의 팔이 저릿하게 감각을 잃어 가도 발렌은 날 선 태도를 고수했다. 서늘한 작업실의 온도에 적응된 로셰에게도 연인의 눈은 차다 못해 너무 시렸다. 발렌이 아닌 것처럼. “거짓말 마. 난 남자 안 좋아해.” 진짜로, 발렌이 아닌가 보다.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9791101792956"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction"
+                ],
+                "maturityRating": "MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.1.1.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=FyMVEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=FyMVEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "ko",
+                "previewLink": "http://books.google.co.kr/books?id=FyMVEAAAQBAJ&pg=PT1&dq=time&hl=&cd=9&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=FyMVEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=FyMVEAAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "KR",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 3500,
+                    "currencyCode": "KRW"
+                },
+                "retailPrice": {
+                    "amount": 3150,
+                    "currencyCode": "KRW"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=FyMVEAAAQBAJ&rdid=book-FyMVEAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 3500000000,
+                            "currencyCode": "KRW"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 3150000000,
+                            "currencyCode": "KRW"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "KR",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.co.kr/books/download/%ED%83%80%EC%9E%84_%ED%88%AC_%EC%B4%88%EC%BD%9C%EB%A6%BF_Time_to_Chocolate_2-sample-epub.acsm?id=FyMVEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=FyMVEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "도깨비이빨. <b>타임</b> 투 초콜릿(<b>Time</b> to Chocolate) 2권 <b>타임</b> 투 초콜릿(<b>Time</b> to Chocolate) 2권 전자책 발행 | 2020년."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "OCIhDAAAQBAJ",
+            "etag": "kjk4aSJYQVM",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/OCIhDAAAQBAJ",
+            "volumeInfo": {
+                "title": "골든타임 (Golden Time) 1",
+                "authors": [
+                    "서향"
+                ],
+                "publisher": "로맨스토리",
+                "publishedDate": "2016-02-26",
+                "description": "여긴 어디지? 아니, 나는 누구지? 익숙하지 않은 공간, 그리고 기억나지 않는 사고 끝에 남은 것 없는 기억. “누구…… 세요?” 남편이라고 찾아온 한 남자로부터 내 시간은 다시 시작되었다. 서향의 로맨스 장편 소설 『골든타임 (Golden Time)』 제 1권.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9791131199060"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "1.2.2.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=OCIhDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=OCIhDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "ko",
+                "previewLink": "http://books.google.co.kr/books?id=OCIhDAAAQBAJ&pg=PP1&dq=time&hl=&cd=10&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=OCIhDAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=OCIhDAAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "KR",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 3600,
+                    "currencyCode": "KRW"
+                },
+                "retailPrice": {
+                    "amount": 3240,
+                    "currencyCode": "KRW"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=OCIhDAAAQBAJ&rdid=book-OCIhDAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 3600000000,
+                            "currencyCode": "KRW"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 3240000000,
+                            "currencyCode": "KRW"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "KR",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.co.kr/books/download/%EA%B3%A8%EB%93%A0%ED%83%80%EC%9E%84_Golden_Time_1-sample-epub.acsm?id=OCIhDAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=OCIhDAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "서향. 『] | 470/14 골든 <b>타임</b> . |- - T |- | - ookcuEE RotAxicE sroR 서향 로맨스 장편 소설 골든<b>타임</b> (Golden <b>Time</b>) 1. Front Cover."
+            }
+        }
+    ]
+}
