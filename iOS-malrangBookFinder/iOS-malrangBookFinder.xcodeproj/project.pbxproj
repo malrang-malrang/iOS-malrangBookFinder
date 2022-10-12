@@ -26,6 +26,7 @@
 		30C76AF228F69780001C56DE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF128F69780001C56DE /* Endpoint.swift */; };
 		30C76AF428F697F7001C56DE /* EndpointStrage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF328F697F7001C56DE /* EndpointStrage.swift */; };
 		30C76AF828F698D7001C56DE /* BookSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF728F698D7001C56DE /* BookSearchRequest.swift */; };
+		30C76AFA28F69AA6001C56DE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF928F69AA6001C56DE /* NetworkManager.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
 		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 		30C76AF128F69780001C56DE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		30C76AF328F697F7001C56DE /* EndpointStrage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointStrage.swift; sourceTree = "<group>"; };
 		30C76AF728F698D7001C56DE /* BookSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRequest.swift; sourceTree = "<group>"; };
+		30C76AF928F69AA6001C56DE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D057A528F6720A00AC931D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,8 +223,9 @@
 		30C76AE328F687E5001C56DE /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				30C76AE428F6881A001C56DE /* HttpMethod.swift */,
+				30C76AF928F69AA6001C56DE /* NetworkManager.swift */,
 				30C76AE628F688C6001C56DE /* NetworError.swift */,
+				30C76AE428F6881A001C56DE /* HttpMethod.swift */,
 				30C76AE828F689DB001C56DE /* Requestable.swift */,
 				30C76AF128F69780001C56DE /* Endpoint.swift */,
 				30C76AF328F697F7001C56DE /* EndpointStrage.swift */,
@@ -563,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C76AFA28F69AA6001C56DE /* NetworkManager.swift in Sources */,
 				30C76AED28F68AEC001C56DE /* Encodable+Sugar.swift in Sources */,
 				3063A10E28F685A8002624EC /* VolumeInformationDTO.swift in Sources */,
 				3063A11A28F6866A002624EC /* LayerInfoDTO.swift in Sources */,
