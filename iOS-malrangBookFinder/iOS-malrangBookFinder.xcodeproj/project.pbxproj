@@ -10,7 +10,6 @@
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
 		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
-		30D057AB28F6720A00AC931D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D057A928F6720A00AC931D /* Main.storyboard */; };
 		30D057AD28F6720B00AC931D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D057AC28F6720B00AC931D /* Assets.xcassets */; };
 		30D057B028F6720B00AC931D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D057AE28F6720B00AC931D /* LaunchScreen.storyboard */; };
 		30D057BB28F6720B00AC931D /* iOS_malrangBookFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057BA28F6720B00AC931D /* iOS_malrangBookFinderTests.swift */; };
@@ -44,7 +43,6 @@
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D057A528F6720A00AC931D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		30D057A728F6720A00AC931D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		30D057AA28F6720A00AC931D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30D057AC28F6720B00AC931D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30D057AF28F6720B00AC931D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30D057B128F6720B00AC931D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				AE71D3632F6990277C52A568 /* Pods-iOS-malrangBookFinderTests.debug.xcconfig */,
 				A07E11DAAC4AC75728FC3EB3 /* Pods-iOS-malrangBookFinderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -143,7 +140,6 @@
 				30D057A328F6720A00AC931D /* AppDelegate.swift */,
 				30D057A528F6720A00AC931D /* SceneDelegate.swift */,
 				30D057A728F6720A00AC931D /* ViewController.swift */,
-				30D057A928F6720A00AC931D /* Main.storyboard */,
 				30D057AC28F6720B00AC931D /* Assets.xcassets */,
 				30D057AE28F6720B00AC931D /* LaunchScreen.storyboard */,
 				30D057B128F6720B00AC931D /* Info.plist */,
@@ -279,7 +275,6 @@
 			files = (
 				30D057B028F6720B00AC931D /* LaunchScreen.storyboard in Resources */,
 				30D057AD28F6720B00AC931D /* Assets.xcassets in Resources */,
-				30D057AB28F6720A00AC931D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,14 +441,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		30D057A928F6720A00AC931D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				30D057AA28F6720A00AC931D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		30D057AE28F6720B00AC931D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -515,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -569,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -591,7 +578,6 @@
 				INFOPLIST_FILE = "iOS-malrangBookFinder/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -619,7 +605,6 @@
 				INFOPLIST_FILE = "iOS-malrangBookFinder/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
