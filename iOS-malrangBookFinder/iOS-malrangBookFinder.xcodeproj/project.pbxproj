@@ -112,6 +112,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3063A10228F67939002624EC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				30D057A328F6720A00AC931D /* AppDelegate.swift */,
+				30D057A528F6720A00AC931D /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3063A10328F6794A002624EC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				30D057AC28F6720B00AC931D /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3063A10428F6795A002624EC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				30D057A728F6720A00AC931D /* ViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3063A10528F6796B002624EC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				30D057AE28F6720B00AC931D /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		30D0579728F6720A00AC931D = {
 			isa = PBXGroup;
 			children = (
@@ -137,12 +170,11 @@
 		30D057A228F6720A00AC931D /* iOS-malrangBookFinder */ = {
 			isa = PBXGroup;
 			children = (
-				30D057A328F6720A00AC931D /* AppDelegate.swift */,
-				30D057A528F6720A00AC931D /* SceneDelegate.swift */,
-				30D057A728F6720A00AC931D /* ViewController.swift */,
-				30D057AC28F6720B00AC931D /* Assets.xcassets */,
-				30D057AE28F6720B00AC931D /* LaunchScreen.storyboard */,
 				30D057B128F6720B00AC931D /* Info.plist */,
+				3063A10228F67939002624EC /* Application */,
+				3063A10328F6794A002624EC /* Resource */,
+				3063A10428F6795A002624EC /* Presentation */,
+				3063A10528F6796B002624EC /* SupportingFiles */,
 			);
 			path = "iOS-malrangBookFinder";
 			sourceTree = "<group>";
