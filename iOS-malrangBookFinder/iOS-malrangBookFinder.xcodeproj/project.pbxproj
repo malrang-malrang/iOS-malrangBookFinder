@@ -33,6 +33,7 @@
 		30C76B0728F6A497001C56DE /* MockDataTestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0628F6A497001C56DE /* MockDataTestManager.swift */; };
 		30C76B0C28F6CC08001C56DE /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0B28F6CC08001C56DE /* RepositoryTests.swift */; };
 		30C76B0F28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0E28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift */; };
+		30C76B1128F6E4EF001C56DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B1028F6E4EF001C56DE /* AppCoordinator.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
 		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
@@ -90,6 +91,7 @@
 		30C76B0628F6A497001C56DE /* MockDataTestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTestManager.swift; sourceTree = "<group>"; };
 		30C76B0B28F6CC08001C56DE /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		30C76B0E28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksRepositoryProtocol.swift; sourceTree = "<group>"; };
+		30C76B1028F6E4EF001C56DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D057A528F6720A00AC931D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				30D057A328F6720A00AC931D /* AppDelegate.swift */,
 				30D057A528F6720A00AC931D /* SceneDelegate.swift */,
+				30C76B1028F6E4EF001C56DE /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 			files = (
 				30C76AFA28F69AA6001C56DE /* NetworkManager.swift in Sources */,
 				30C76AED28F68AEC001C56DE /* Encodable+Sugar.swift in Sources */,
+				30C76B1128F6E4EF001C56DE /* AppCoordinator.swift in Sources */,
 				3063A10E28F685A8002624EC /* VolumeInformationDTO.swift in Sources */,
 				3063A11A28F6866A002624EC /* LayerInfoDTO.swift in Sources */,
 				3063A11228F685E7002624EC /* ReadingModesDTO.swift in Sources */,
