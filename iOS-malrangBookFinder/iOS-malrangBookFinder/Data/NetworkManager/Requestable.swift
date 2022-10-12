@@ -15,8 +15,24 @@ protocol Requestable {
 }
 
 extension Requestable {
-    func generateURL() -> Result<URL, NetworkError> {
+    func generateUrlRequest() -> Result<URLRequest, NetworkError> {
+        var urlRequest: URLRequest
+
+        switch self.generateURL() {
+        case.success(let url):
+            urlRequest = URLRequest(url: url)
+        case.failure(let error):
+            return .failure(error)
+        }
+
+        urlRequest.httpMethod = self.method.value
+
+        return .success(urlRequest)
+    }
+
+    private func generateURL() -> Result<URL, NetworkError> {
         let fullPath = "\(self.host)\(self.path)"
+
         guard var urlComponent = URLComponents(string: fullPath) else {
             return .failure(.urlComponetError)
         }
@@ -37,6 +53,7 @@ extension Requestable {
 
     private func generateQueryItems(at queryParameters: Encodable) -> Result<[URLQueryItem], NetworkError> {
         var urlQueryItems: [URLQueryItem] = []
+
         switch queryParameters.toDictionary() {
         case .success(let dictionaryData):
             dictionaryData.forEach { key, value in
