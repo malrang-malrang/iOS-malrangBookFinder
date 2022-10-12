@@ -19,6 +19,7 @@
 		3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11B28F68697002624EC /* SaleInformationDTO.swift */; };
 		3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11D28F686C0002624EC /* AccessInformationDTO.swift */; };
 		30C76AE528F6881A001C56DE /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE428F6881A001C56DE /* HttpMethod.swift */; };
+		30C76AE728F688C6001C56DE /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE628F688C6001C56DE /* NetworError.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
 		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		3063A11B28F68697002624EC /* SaleInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleInformationDTO.swift; sourceTree = "<group>"; };
 		3063A11D28F686C0002624EC /* AccessInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessInformationDTO.swift; sourceTree = "<group>"; };
 		30C76AE428F6881A001C56DE /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		30C76AE628F688C6001C56DE /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D057A528F6720A00AC931D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				30C76AE428F6881A001C56DE /* HttpMethod.swift */,
+				30C76AE628F688C6001C56DE /* NetworError.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				3063A11228F685E7002624EC /* ReadingModesDTO.swift in Sources */,
 				3063A10A28F68556002624EC /* SearchResultDTO.swift in Sources */,
 				3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */,
+				30C76AE728F688C6001C56DE /* NetworError.swift in Sources */,
 				30D057A828F6720A00AC931D /* ViewController.swift in Sources */,
 				3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */,
 				30C76AE528F6881A001C56DE /* HttpMethod.swift in Sources */,
