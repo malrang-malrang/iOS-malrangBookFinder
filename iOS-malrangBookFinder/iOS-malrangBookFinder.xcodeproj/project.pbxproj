@@ -34,6 +34,7 @@
 		30C76B0C28F6CC08001C56DE /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0B28F6CC08001C56DE /* RepositoryTests.swift */; };
 		30C76B0F28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0E28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift */; };
 		30C76B1128F6E4EF001C56DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B1028F6E4EF001C56DE /* AppCoordinator.swift */; };
+		30C76B1628F6EA48001C56DE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B1528F6EA48001C56DE /* MainCoordinator.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
 		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
@@ -92,6 +93,7 @@
 		30C76B0B28F6CC08001C56DE /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		30C76B0E28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksRepositoryProtocol.swift; sourceTree = "<group>"; };
 		30C76B1028F6E4EF001C56DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		30C76B1528F6EA48001C56DE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D057A528F6720A00AC931D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		3063A10428F6795A002624EC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				30C76B1428F6EA39001C56DE /* Coordinator */,
 				30D057A728F6720A00AC931D /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -330,6 +333,14 @@
 				30C76B0E28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		30C76B1428F6EA39001C56DE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30C76B1528F6EA48001C56DE /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		30D0579728F6720A00AC931D = {
@@ -649,6 +660,7 @@
 				30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */,
 				3063A11428F685FE002624EC /* DimensionsDTO.swift in Sources */,
 				30C76AE928F689DB001C56DE /* Requestable.swift in Sources */,
+				30C76B1628F6EA48001C56DE /* MainCoordinator.swift in Sources */,
 				3063A10C28F68572002624EC /* BookInformationDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
