@@ -172,9 +172,9 @@
 			children = (
 				30D057B128F6720B00AC931D /* Info.plist */,
 				3063A10228F67939002624EC /* Application */,
+				3063A10528F6796B002624EC /* SupportingFiles */,
 				3063A10328F6794A002624EC /* Resource */,
 				3063A10428F6795A002624EC /* Presentation */,
-				3063A10528F6796B002624EC /* SupportingFiles */,
 			);
 			path = "iOS-malrangBookFinder";
 			sourceTree = "<group>";
