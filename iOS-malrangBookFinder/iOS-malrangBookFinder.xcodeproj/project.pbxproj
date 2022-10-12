@@ -7,12 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3063A10A28F68556002624EC /* SearchResultDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A10928F68556002624EC /* SearchResultDTO.swift */; };
+		3063A10C28F68572002624EC /* BookInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A10B28F68572002624EC /* BookInformationDTO.swift */; };
+		3063A10E28F685A8002624EC /* VolumeInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A10D28F685A8002624EC /* VolumeInformationDTO.swift */; };
+		3063A11028F685BA002624EC /* IndustryIdentifiersDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A10F28F685BA002624EC /* IndustryIdentifiersDTO.swift */; };
+		3063A11228F685E7002624EC /* ReadingModesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11128F685E7002624EC /* ReadingModesDTO.swift */; };
+		3063A11428F685FE002624EC /* DimensionsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11328F685FE002624EC /* DimensionsDTO.swift */; };
+		3063A11628F6860C002624EC /* PanelizationSummaryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11528F6860C002624EC /* PanelizationSummaryDTO.swift */; };
+		3063A11828F6861E002624EC /* ImageLinksDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11728F6861E002624EC /* ImageLinksDTO.swift */; };
+		3063A11A28F6866A002624EC /* LayerInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11928F6866A002624EC /* LayerInfoDTO.swift */; };
+		3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11B28F68697002624EC /* SaleInformationDTO.swift */; };
+		3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11D28F686C0002624EC /* AccessInformationDTO.swift */; };
+		30C76AE528F6881A001C56DE /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE428F6881A001C56DE /* HttpMethod.swift */; };
+		30C76AE728F688C6001C56DE /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE628F688C6001C56DE /* NetworError.swift */; };
+		30C76AE928F689DB001C56DE /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE828F689DB001C56DE /* Requestable.swift */; };
+		30C76AED28F68AEC001C56DE /* Encodable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AEC28F68AEC001C56DE /* Encodable+Sugar.swift */; };
+		30C76AF028F68B1A001C56DE /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AEF28F68B1A001C56DE /* Json.swift */; };
+		30C76AF228F69780001C56DE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF128F69780001C56DE /* Endpoint.swift */; };
+		30C76AF428F697F7001C56DE /* EndpointStrage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF328F697F7001C56DE /* EndpointStrage.swift */; };
+		30C76AF828F698D7001C56DE /* BookSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF728F698D7001C56DE /* BookSearchRequest.swift */; };
+		30C76AFA28F69AA6001C56DE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF928F69AA6001C56DE /* NetworkManager.swift */; };
+		30C76AFD28F69DBD001C56DE /* GoogleBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AFC28F69DBD001C56DE /* GoogleBooksRepository.swift */; };
+		30C76B0328F6A19E001C56DE /* MockUrlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0228F6A19E001C56DE /* MockUrlProtocol.swift */; };
+		30C76B0528F6A1DF001C56DE /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0428F6A1DF001C56DE /* NetworkManagerTests.swift */; };
+		30C76B0728F6A497001C56DE /* MockDataTestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0628F6A497001C56DE /* MockDataTestManager.swift */; };
+		30C76B0C28F6CC08001C56DE /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0B28F6CC08001C56DE /* RepositoryTests.swift */; };
+		30C76B0F28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0E28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
 		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
 		30D057AD28F6720B00AC931D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D057AC28F6720B00AC931D /* Assets.xcassets */; };
 		30D057B028F6720B00AC931D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D057AE28F6720B00AC931D /* LaunchScreen.storyboard */; };
-		30D057BB28F6720B00AC931D /* iOS_malrangBookFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057BA28F6720B00AC931D /* iOS_malrangBookFinderTests.swift */; };
 		30D057C528F6720B00AC931D /* iOS_malrangBookFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057C428F6720B00AC931D /* iOS_malrangBookFinderUITests.swift */; };
 		30D057C728F6720B00AC931D /* iOS_malrangBookFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057C628F6720B00AC931D /* iOS_malrangBookFinderUITestsLaunchTests.swift */; };
 		3E7652E353352CF24F501BE2 /* Pods_iOS_malrangBookFinder_iOS_malrangBookFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE3943044977BF9C86EF9BB /* Pods_iOS_malrangBookFinder_iOS_malrangBookFinderUITests.framework */; };
@@ -39,6 +64,32 @@
 
 /* Begin PBXFileReference section */
 		0096846F5A24EB906A776A69 /* Pods_iOS_malrangBookFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_malrangBookFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3063A10928F68556002624EC /* SearchResultDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDTO.swift; sourceTree = "<group>"; };
+		3063A10B28F68572002624EC /* BookInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInformationDTO.swift; sourceTree = "<group>"; };
+		3063A10D28F685A8002624EC /* VolumeInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeInformationDTO.swift; sourceTree = "<group>"; };
+		3063A10F28F685BA002624EC /* IndustryIdentifiersDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustryIdentifiersDTO.swift; sourceTree = "<group>"; };
+		3063A11128F685E7002624EC /* ReadingModesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingModesDTO.swift; sourceTree = "<group>"; };
+		3063A11328F685FE002624EC /* DimensionsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionsDTO.swift; sourceTree = "<group>"; };
+		3063A11528F6860C002624EC /* PanelizationSummaryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelizationSummaryDTO.swift; sourceTree = "<group>"; };
+		3063A11728F6861E002624EC /* ImageLinksDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLinksDTO.swift; sourceTree = "<group>"; };
+		3063A11928F6866A002624EC /* LayerInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerInfoDTO.swift; sourceTree = "<group>"; };
+		3063A11B28F68697002624EC /* SaleInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleInformationDTO.swift; sourceTree = "<group>"; };
+		3063A11D28F686C0002624EC /* AccessInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessInformationDTO.swift; sourceTree = "<group>"; };
+		30C76AE428F6881A001C56DE /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		30C76AE628F688C6001C56DE /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
+		30C76AE828F689DB001C56DE /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		30C76AEC28F68AEC001C56DE /* Encodable+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Sugar.swift"; sourceTree = "<group>"; };
+		30C76AEF28F68B1A001C56DE /* Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
+		30C76AF128F69780001C56DE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		30C76AF328F697F7001C56DE /* EndpointStrage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointStrage.swift; sourceTree = "<group>"; };
+		30C76AF728F698D7001C56DE /* BookSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRequest.swift; sourceTree = "<group>"; };
+		30C76AF928F69AA6001C56DE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		30C76AFC28F69DBD001C56DE /* GoogleBooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksRepository.swift; sourceTree = "<group>"; };
+		30C76B0228F6A19E001C56DE /* MockUrlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlProtocol.swift; sourceTree = "<group>"; };
+		30C76B0428F6A1DF001C56DE /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		30C76B0628F6A497001C56DE /* MockDataTestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTestManager.swift; sourceTree = "<group>"; };
+		30C76B0B28F6CC08001C56DE /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		30C76B0E28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksRepositoryProtocol.swift; sourceTree = "<group>"; };
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D057A528F6720A00AC931D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +98,6 @@
 		30D057AF28F6720B00AC931D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30D057B128F6720B00AC931D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30D057B628F6720B00AC931D /* iOS-malrangBookFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-malrangBookFinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		30D057BA28F6720B00AC931D /* iOS_malrangBookFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_malrangBookFinderTests.swift; sourceTree = "<group>"; };
 		30D057C028F6720B00AC931D /* iOS-malrangBookFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-malrangBookFinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057C428F6720B00AC931D /* iOS_malrangBookFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_malrangBookFinderUITests.swift; sourceTree = "<group>"; };
 		30D057C628F6720B00AC931D /* iOS_malrangBookFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_malrangBookFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -145,6 +195,140 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		3063A10628F67DF9002624EC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3063A10728F67E08002624EC /* Model */,
+				30C76AFB28F69D98001C56DE /* Repository */,
+				30C76AE328F687E5001C56DE /* NetworkManager */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3063A10728F67E08002624EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3063A10828F68540002624EC /* GoogleBooksDTO */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3063A10828F68540002624EC /* GoogleBooksDTO */ = {
+			isa = PBXGroup;
+			children = (
+				3063A10928F68556002624EC /* SearchResultDTO.swift */,
+				3063A10B28F68572002624EC /* BookInformationDTO.swift */,
+				3063A10D28F685A8002624EC /* VolumeInformationDTO.swift */,
+				3063A10F28F685BA002624EC /* IndustryIdentifiersDTO.swift */,
+				3063A11128F685E7002624EC /* ReadingModesDTO.swift */,
+				3063A11328F685FE002624EC /* DimensionsDTO.swift */,
+				3063A11528F6860C002624EC /* PanelizationSummaryDTO.swift */,
+				3063A11728F6861E002624EC /* ImageLinksDTO.swift */,
+				3063A11928F6866A002624EC /* LayerInfoDTO.swift */,
+				3063A11B28F68697002624EC /* SaleInformationDTO.swift */,
+				3063A11D28F686C0002624EC /* AccessInformationDTO.swift */,
+			);
+			path = GoogleBooksDTO;
+			sourceTree = "<group>";
+		};
+		30C76AE328F687E5001C56DE /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				30C76AF928F69AA6001C56DE /* NetworkManager.swift */,
+				30C76AE628F688C6001C56DE /* NetworError.swift */,
+				30C76AE428F6881A001C56DE /* HttpMethod.swift */,
+				30C76AE828F689DB001C56DE /* Requestable.swift */,
+				30C76AF128F69780001C56DE /* Endpoint.swift */,
+				30C76AF328F697F7001C56DE /* EndpointStrage.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		30C76AEA28F68A83001C56DE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				30C76AEE28F68AFF001C56DE /* Singleton */,
+				30C76AEB28F68A99001C56DE /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		30C76AEB28F68A99001C56DE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				30C76AEC28F68AEC001C56DE /* Encodable+Sugar.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		30C76AEE28F68AFF001C56DE /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				30C76AEF28F68B1A001C56DE /* Json.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		30C76AF528F698AF001C56DE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				30C76AF628F698BD001C56DE /* Entity */,
+				30C76B0D28F6CCC9001C56DE /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		30C76AF628F698BD001C56DE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				30C76AF728F698D7001C56DE /* BookSearchRequest.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		30C76AFB28F69D98001C56DE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				30C76AFC28F69DBD001C56DE /* GoogleBooksRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		30C76AFE28F6A11A001C56DE /* DataTests */ = {
+			isa = PBXGroup;
+			children = (
+				30C76B0628F6A497001C56DE /* MockDataTestManager.swift */,
+				30C76B0228F6A19E001C56DE /* MockUrlProtocol.swift */,
+				30C76AFF28F6A120001C56DE /* NetworkManagerTests */,
+				30C76B0A28F6CBB6001C56DE /* RepositoryTests */,
+			);
+			path = DataTests;
+			sourceTree = "<group>";
+		};
+		30C76AFF28F6A120001C56DE /* NetworkManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				30C76B0428F6A1DF001C56DE /* NetworkManagerTests.swift */,
+			);
+			path = NetworkManagerTests;
+			sourceTree = "<group>";
+		};
+		30C76B0A28F6CBB6001C56DE /* RepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				30C76B0B28F6CC08001C56DE /* RepositoryTests.swift */,
+			);
+			path = RepositoryTests;
+			sourceTree = "<group>";
+		};
+		30C76B0D28F6CCC9001C56DE /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				30C76B0E28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		30D0579728F6720A00AC931D = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +358,10 @@
 				3063A10228F67939002624EC /* Application */,
 				3063A10528F6796B002624EC /* SupportingFiles */,
 				3063A10328F6794A002624EC /* Resource */,
+				30C76AF528F698AF001C56DE /* Domain */,
 				3063A10428F6795A002624EC /* Presentation */,
+				3063A10628F67DF9002624EC /* Data */,
+				30C76AEA28F68A83001C56DE /* Utils */,
 			);
 			path = "iOS-malrangBookFinder";
 			sourceTree = "<group>";
@@ -182,7 +369,7 @@
 		30D057B928F6720B00AC931D /* iOS-malrangBookFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				30D057BA28F6720B00AC931D /* iOS_malrangBookFinderTests.swift */,
+				30C76AFE28F6A11A001C56DE /* DataTests */,
 			);
 			path = "iOS-malrangBookFinderTests";
 			sourceTree = "<group>";
@@ -434,9 +621,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C76AFA28F69AA6001C56DE /* NetworkManager.swift in Sources */,
+				30C76AED28F68AEC001C56DE /* Encodable+Sugar.swift in Sources */,
+				3063A10E28F685A8002624EC /* VolumeInformationDTO.swift in Sources */,
+				3063A11A28F6866A002624EC /* LayerInfoDTO.swift in Sources */,
+				3063A11228F685E7002624EC /* ReadingModesDTO.swift in Sources */,
+				30C76B0F28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift in Sources */,
+				3063A10A28F68556002624EC /* SearchResultDTO.swift in Sources */,
+				30C76AF428F697F7001C56DE /* EndpointStrage.swift in Sources */,
+				30C76AF828F698D7001C56DE /* BookSearchRequest.swift in Sources */,
+				3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */,
+				30C76AE728F688C6001C56DE /* NetworError.swift in Sources */,
 				30D057A828F6720A00AC931D /* ViewController.swift in Sources */,
+				3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */,
+				30C76AE528F6881A001C56DE /* HttpMethod.swift in Sources */,
+				3063A11028F685BA002624EC /* IndustryIdentifiersDTO.swift in Sources */,
 				30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */,
+				3063A11628F6860C002624EC /* PanelizationSummaryDTO.swift in Sources */,
+				30C76AF028F68B1A001C56DE /* Json.swift in Sources */,
+				30C76AFD28F69DBD001C56DE /* GoogleBooksRepository.swift in Sources */,
+				30C76AF228F69780001C56DE /* Endpoint.swift in Sources */,
+				3063A11828F6861E002624EC /* ImageLinksDTO.swift in Sources */,
 				30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */,
+				3063A11428F685FE002624EC /* DimensionsDTO.swift in Sources */,
+				30C76AE928F689DB001C56DE /* Requestable.swift in Sources */,
+				3063A10C28F68572002624EC /* BookInformationDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +653,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D057BB28F6720B00AC931D /* iOS_malrangBookFinderTests.swift in Sources */,
+				30C76B0528F6A1DF001C56DE /* NetworkManagerTests.swift in Sources */,
+				30C76B0328F6A19E001C56DE /* MockUrlProtocol.swift in Sources */,
+				30C76B0728F6A497001C56DE /* MockDataTestManager.swift in Sources */,
+				30C76B0C28F6CC08001C56DE /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
