@@ -26,6 +26,7 @@ final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
     }
 
     func start() {
-
+        let mainView = MainViewController()
+        self.navigationController.pushViewController(mainView, animated: true)
     }
 }

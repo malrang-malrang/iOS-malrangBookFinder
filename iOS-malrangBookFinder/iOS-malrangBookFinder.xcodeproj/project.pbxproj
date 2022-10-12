@@ -37,7 +37,7 @@
 		30C76B1628F6EA48001C56DE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B1528F6EA48001C56DE /* MainCoordinator.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
-		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
+		30D057A828F6720A00AC931D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* MainViewController.swift */; };
 		30D057AD28F6720B00AC931D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D057AC28F6720B00AC931D /* Assets.xcassets */; };
 		30D057B028F6720B00AC931D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D057AE28F6720B00AC931D /* LaunchScreen.storyboard */; };
 		30D057C528F6720B00AC931D /* iOS_malrangBookFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057C428F6720B00AC931D /* iOS_malrangBookFinderUITests.swift */; };
@@ -97,7 +97,7 @@
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D057A528F6720A00AC931D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30D057A728F6720A00AC931D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30D057A728F6720A00AC931D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		30D057AC28F6720B00AC931D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30D057AF28F6720B00AC931D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30D057B128F6720B00AC931D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				30C76B1428F6EA39001C56DE /* Coordinator */,
-				30D057A728F6720A00AC931D /* ViewController.swift */,
+				30C76B1728F6EBEC001C56DE /* Main */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -341,6 +341,22 @@
 				30C76B1528F6EA48001C56DE /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		30C76B1728F6EBEC001C56DE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				30C76B1828F6EBFD001C56DE /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		30C76B1828F6EBFD001C56DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30D057A728F6720A00AC931D /* MainViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		30D0579728F6720A00AC931D = {
@@ -647,7 +663,7 @@
 				30C76AF828F698D7001C56DE /* BookSearchRequest.swift in Sources */,
 				3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */,
 				30C76AE728F688C6001C56DE /* NetworError.swift in Sources */,
-				30D057A828F6720A00AC931D /* ViewController.swift in Sources */,
+				30D057A828F6720A00AC931D /* MainViewController.swift in Sources */,
 				3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */,
 				30C76AE528F6881A001C56DE /* HttpMethod.swift in Sources */,
 				3063A11028F685BA002624EC /* IndustryIdentifiersDTO.swift in Sources */,
