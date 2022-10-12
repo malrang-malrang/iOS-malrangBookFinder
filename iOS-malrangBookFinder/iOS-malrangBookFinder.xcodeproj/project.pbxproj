@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3063A10A28F68556002624EC /* SearchResultDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A10928F68556002624EC /* SearchResultDTO.swift */; };
+		3063A10C28F68572002624EC /* BookInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A10B28F68572002624EC /* BookInformationDTO.swift */; };
+		3063A10E28F685A8002624EC /* VolumeInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A10D28F685A8002624EC /* VolumeInformationDTO.swift */; };
+		3063A11028F685BA002624EC /* IndustryIdentifiersDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A10F28F685BA002624EC /* IndustryIdentifiersDTO.swift */; };
+		3063A11228F685E7002624EC /* ReadingModesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11128F685E7002624EC /* ReadingModesDTO.swift */; };
+		3063A11428F685FE002624EC /* DimensionsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11328F685FE002624EC /* DimensionsDTO.swift */; };
+		3063A11628F6860C002624EC /* PanelizationSummaryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11528F6860C002624EC /* PanelizationSummaryDTO.swift */; };
+		3063A11828F6861E002624EC /* ImageLinksDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11728F6861E002624EC /* ImageLinksDTO.swift */; };
+		3063A11A28F6866A002624EC /* LayerInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11928F6866A002624EC /* LayerInfoDTO.swift */; };
+		3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11B28F68697002624EC /* SaleInformationDTO.swift */; };
+		3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11D28F686C0002624EC /* AccessInformationDTO.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
 		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
@@ -39,6 +50,17 @@
 
 /* Begin PBXFileReference section */
 		0096846F5A24EB906A776A69 /* Pods_iOS_malrangBookFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_malrangBookFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3063A10928F68556002624EC /* SearchResultDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDTO.swift; sourceTree = "<group>"; };
+		3063A10B28F68572002624EC /* BookInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInformationDTO.swift; sourceTree = "<group>"; };
+		3063A10D28F685A8002624EC /* VolumeInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeInformationDTO.swift; sourceTree = "<group>"; };
+		3063A10F28F685BA002624EC /* IndustryIdentifiersDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustryIdentifiersDTO.swift; sourceTree = "<group>"; };
+		3063A11128F685E7002624EC /* ReadingModesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingModesDTO.swift; sourceTree = "<group>"; };
+		3063A11328F685FE002624EC /* DimensionsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionsDTO.swift; sourceTree = "<group>"; };
+		3063A11528F6860C002624EC /* PanelizationSummaryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelizationSummaryDTO.swift; sourceTree = "<group>"; };
+		3063A11728F6861E002624EC /* ImageLinksDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLinksDTO.swift; sourceTree = "<group>"; };
+		3063A11928F6866A002624EC /* LayerInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerInfoDTO.swift; sourceTree = "<group>"; };
+		3063A11B28F68697002624EC /* SaleInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleInformationDTO.swift; sourceTree = "<group>"; };
+		3063A11D28F686C0002624EC /* AccessInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessInformationDTO.swift; sourceTree = "<group>"; };
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D057A528F6720A00AC931D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +167,40 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		3063A10628F67DF9002624EC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3063A10728F67E08002624EC /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3063A10728F67E08002624EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3063A10828F68540002624EC /* GoogleBooksDTO */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3063A10828F68540002624EC /* GoogleBooksDTO */ = {
+			isa = PBXGroup;
+			children = (
+				3063A10928F68556002624EC /* SearchResultDTO.swift */,
+				3063A10B28F68572002624EC /* BookInformationDTO.swift */,
+				3063A10D28F685A8002624EC /* VolumeInformationDTO.swift */,
+				3063A10F28F685BA002624EC /* IndustryIdentifiersDTO.swift */,
+				3063A11128F685E7002624EC /* ReadingModesDTO.swift */,
+				3063A11328F685FE002624EC /* DimensionsDTO.swift */,
+				3063A11528F6860C002624EC /* PanelizationSummaryDTO.swift */,
+				3063A11728F6861E002624EC /* ImageLinksDTO.swift */,
+				3063A11928F6866A002624EC /* LayerInfoDTO.swift */,
+				3063A11B28F68697002624EC /* SaleInformationDTO.swift */,
+				3063A11D28F686C0002624EC /* AccessInformationDTO.swift */,
+			);
+			path = GoogleBooksDTO;
+			sourceTree = "<group>";
+		};
 		30D0579728F6720A00AC931D = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +231,7 @@
 				3063A10528F6796B002624EC /* SupportingFiles */,
 				3063A10328F6794A002624EC /* Resource */,
 				3063A10428F6795A002624EC /* Presentation */,
+				3063A10628F67DF9002624EC /* Data */,
 			);
 			path = "iOS-malrangBookFinder";
 			sourceTree = "<group>";
@@ -434,9 +491,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3063A10E28F685A8002624EC /* VolumeInformationDTO.swift in Sources */,
+				3063A11A28F6866A002624EC /* LayerInfoDTO.swift in Sources */,
+				3063A11228F685E7002624EC /* ReadingModesDTO.swift in Sources */,
+				3063A10A28F68556002624EC /* SearchResultDTO.swift in Sources */,
+				3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */,
 				30D057A828F6720A00AC931D /* ViewController.swift in Sources */,
+				3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */,
+				3063A11028F685BA002624EC /* IndustryIdentifiersDTO.swift in Sources */,
 				30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */,
+				3063A11628F6860C002624EC /* PanelizationSummaryDTO.swift in Sources */,
+				3063A11828F6861E002624EC /* ImageLinksDTO.swift in Sources */,
 				30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */,
+				3063A11428F685FE002624EC /* DimensionsDTO.swift in Sources */,
+				3063A10C28F68572002624EC /* BookInformationDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
