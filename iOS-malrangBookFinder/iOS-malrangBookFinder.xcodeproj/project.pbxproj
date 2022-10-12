@@ -31,6 +31,7 @@
 		30C76B0328F6A19E001C56DE /* MockUrlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0228F6A19E001C56DE /* MockUrlProtocol.swift */; };
 		30C76B0528F6A1DF001C56DE /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0428F6A1DF001C56DE /* NetworkManagerTests.swift */; };
 		30C76B0728F6A497001C56DE /* MockDataTestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0628F6A497001C56DE /* MockDataTestManager.swift */; };
+		30C76B0C28F6CC08001C56DE /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0B28F6CC08001C56DE /* RepositoryTests.swift */; };
 		30C76B0F28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0E28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
@@ -87,6 +88,7 @@
 		30C76B0228F6A19E001C56DE /* MockUrlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlProtocol.swift; sourceTree = "<group>"; };
 		30C76B0428F6A1DF001C56DE /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		30C76B0628F6A497001C56DE /* MockDataTestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTestManager.swift; sourceTree = "<group>"; };
+		30C76B0B28F6CC08001C56DE /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		30C76B0E28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksRepositoryProtocol.swift; sourceTree = "<group>"; };
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				30C76B0628F6A497001C56DE /* MockDataTestManager.swift */,
 				30C76B0228F6A19E001C56DE /* MockUrlProtocol.swift */,
 				30C76AFF28F6A120001C56DE /* NetworkManagerTests */,
+				30C76B0A28F6CBB6001C56DE /* RepositoryTests */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -308,6 +311,14 @@
 				30C76B0428F6A1DF001C56DE /* NetworkManagerTests.swift */,
 			);
 			path = NetworkManagerTests;
+			sourceTree = "<group>";
+		};
+		30C76B0A28F6CBB6001C56DE /* RepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				30C76B0B28F6CC08001C56DE /* RepositoryTests.swift */,
+			);
+			path = RepositoryTests;
 			sourceTree = "<group>";
 		};
 		30C76B0D28F6CCC9001C56DE /* Interfaces */ = {
@@ -645,6 +656,7 @@
 				30C76B0528F6A1DF001C56DE /* NetworkManagerTests.swift in Sources */,
 				30C76B0328F6A19E001C56DE /* MockUrlProtocol.swift in Sources */,
 				30C76B0728F6A497001C56DE /* MockDataTestManager.swift in Sources */,
+				30C76B0C28F6CC08001C56DE /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
