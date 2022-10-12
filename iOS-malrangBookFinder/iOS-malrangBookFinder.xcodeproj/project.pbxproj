@@ -29,6 +29,7 @@
 		30C76AFA28F69AA6001C56DE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF928F69AA6001C56DE /* NetworkManager.swift */; };
 		30C76AFD28F69DBD001C56DE /* GoogleBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AFC28F69DBD001C56DE /* GoogleBooksRepository.swift */; };
 		30C76B0328F6A19E001C56DE /* MockUrlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0228F6A19E001C56DE /* MockUrlProtocol.swift */; };
+		30C76B0528F6A1DF001C56DE /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0428F6A1DF001C56DE /* NetworkManagerTests.swift */; };
 		30C76B0728F6A497001C56DE /* MockDataTestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76B0628F6A497001C56DE /* MockDataTestManager.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
@@ -83,6 +84,7 @@
 		30C76AF928F69AA6001C56DE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		30C76AFC28F69DBD001C56DE /* GoogleBooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksRepository.swift; sourceTree = "<group>"; };
 		30C76B0228F6A19E001C56DE /* MockUrlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlProtocol.swift; sourceTree = "<group>"; };
+		30C76B0428F6A1DF001C56DE /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		30C76B0628F6A497001C56DE /* MockDataTestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataTestManager.swift; sourceTree = "<group>"; };
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -292,9 +294,19 @@
 			children = (
 				30C76B0628F6A497001C56DE /* MockDataTestManager.swift */,
 				30C76B0228F6A19E001C56DE /* MockUrlProtocol.swift */,
+				30C76AFF28F6A120001C56DE /* NetworkManagerTests */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
+		};
+		30C76AFF28F6A120001C56DE /* NetworkManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				30C76B0428F6A1DF001C56DE /* NetworkManagerTests.swift */,
+			);
+			path = NetworkManagerTests;
+			sourceTree = "<group>";
+		};
 		30D0579728F6720A00AC931D = {
 			isa = PBXGroup;
 			children = (
@@ -618,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C76B0528F6A1DF001C56DE /* NetworkManagerTests.swift in Sources */,
 				30C76B0328F6A19E001C56DE /* MockUrlProtocol.swift in Sources */,
 				30C76B0728F6A497001C56DE /* MockDataTestManager.swift in Sources */,
 			);
