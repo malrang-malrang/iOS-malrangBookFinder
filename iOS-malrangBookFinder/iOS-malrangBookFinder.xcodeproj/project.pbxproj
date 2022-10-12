@@ -33,7 +33,6 @@
 		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
 		30D057AD28F6720B00AC931D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D057AC28F6720B00AC931D /* Assets.xcassets */; };
 		30D057B028F6720B00AC931D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D057AE28F6720B00AC931D /* LaunchScreen.storyboard */; };
-		30D057BB28F6720B00AC931D /* iOS_malrangBookFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057BA28F6720B00AC931D /* iOS_malrangBookFinderTests.swift */; };
 		30D057C528F6720B00AC931D /* iOS_malrangBookFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057C428F6720B00AC931D /* iOS_malrangBookFinderUITests.swift */; };
 		30D057C728F6720B00AC931D /* iOS_malrangBookFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057C628F6720B00AC931D /* iOS_malrangBookFinderUITestsLaunchTests.swift */; };
 		3E7652E353352CF24F501BE2 /* Pods_iOS_malrangBookFinder_iOS_malrangBookFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE3943044977BF9C86EF9BB /* Pods_iOS_malrangBookFinder_iOS_malrangBookFinderUITests.framework */; };
@@ -89,7 +88,6 @@
 		30D057AF28F6720B00AC931D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30D057B128F6720B00AC931D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30D057B628F6720B00AC931D /* iOS-malrangBookFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-malrangBookFinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		30D057BA28F6720B00AC931D /* iOS_malrangBookFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_malrangBookFinderTests.swift; sourceTree = "<group>"; };
 		30D057C028F6720B00AC931D /* iOS-malrangBookFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-malrangBookFinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057C428F6720B00AC931D /* iOS_malrangBookFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_malrangBookFinderUITests.swift; sourceTree = "<group>"; };
 		30D057C628F6720B00AC931D /* iOS_malrangBookFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_malrangBookFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -325,7 +323,6 @@
 		30D057B928F6720B00AC931D /* iOS-malrangBookFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				30D057BA28F6720B00AC931D /* iOS_malrangBookFinderTests.swift */,
 			);
 			path = "iOS-malrangBookFinderTests";
 			sourceTree = "<group>";
@@ -608,7 +605,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D057BB28F6720B00AC931D /* iOS_malrangBookFinderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
