@@ -11,7 +11,7 @@ protocol Requestable {
     var host: String { get }
     var path: String { get }
     var method: HttpMethod { get }
-    var queryParameters: Encodable { get }
+    var queryParameters: Encodable? { get }
 }
 
 extension Requestable {
@@ -51,8 +51,12 @@ extension Requestable {
         return .success(url)
     }
 
-    private func generateQueryItems(at queryParameters: Encodable) -> Result<[URLQueryItem], NetworkError> {
+    private func generateQueryItems(at queryParameters: Encodable?) -> Result<[URLQueryItem]?, NetworkError> {
         var urlQueryItems: [URLQueryItem] = []
+
+        guard let queryParameters = queryParameters else {
+            return .success(nil)
+        }
 
         switch queryParameters.toDictionary() {
         case .success(let dictionaryData):
