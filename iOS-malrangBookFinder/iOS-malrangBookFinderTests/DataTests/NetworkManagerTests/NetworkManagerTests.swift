@@ -8,58 +8,61 @@
 import XCTest
 @testable import iOS_malrangBookFinder
 
+import RxSwift
+
 final class NetworkManagerTests: XCTestCase {
-    private var sut: Networkable!
     private let mockDataManager = MockDataTestManager()
+    private var sut: Networkable!
+    private var disposeBag: DisposeBag!
 
     override func setUpWithError() throws {
-        let session = self.mockDataManager.makeMockUrlSession()
-        self.sut = NetworkManager(urlSession: session)
+        try super.setUpWithError()
+        let urlSession = self.mockDataManager.makeMockUrlSession()
+        self.sut = NetworkManager(urlSession: urlSession)
+        self.disposeBag = DisposeBag()
     }
 
     override func tearDownWithError() throws {
+        try super.tearDownWithError()
         self.sut = nil
+        self.disposeBag = nil
     }
 
-    func test_request호출시_httpResponse의_statusCode가_200일때_GoogleBooksSampleData의_데이터를_가져오는지() {
+    func test_request호출시_httpResponse의_statusCode가_200일때_데이터가_전달되는지() {
         // given
-        let promise = expectation(description: "totalItems 1355와 일치하는지")
+        let promise = expectation(description: "subscribe에 값이 전달되는지")
         self.mockDataManager.makeRequestSuccessResult()
         let endPoint = Endpoint(host: "test")
 
         // when
-        _ = self.sut.request(endPoint: endPoint)
-            .decode(type: SearchResultDTO.self, decoder: Json.decoder)
-            .subscribe { bookList in
-                let result = bookList.totalItems
-                let expected = 1355
-                XCTAssertEqual(expected, result)
+        self.sut.request(endPoint: endPoint)
+            .subscribe(onNext: { _ in
+                //then
+                XCTAssertTrue(true)
                 promise.fulfill()
-            } onError: { _ in
+            }, onError: { _ in
                 XCTFail()
-                promise.fulfill()
-            }
-        wait(for: [promise], timeout: 10)
+            })
+            .disposed(by: self.disposeBag)
+        wait(for: [promise], timeout: 5)
     }
 
-    func test_request호출시_httpResponse의_statusCode가_400일때_statusCodeError에러를_반환하는지() {
+    func test_request호출시_httpResponse의_statusCode가_400일때_에러를_전달하는지() {
         // given
-        let promise = expectation(description: "totalItems 1355와 일치하는지")
+        let promise = expectation(description: "onError에 에러가 전달되는지")
         self.mockDataManager.makeRequestFailureResult()
         let endPoint = Endpoint(host: "test")
 
         // when
-        _ = self.sut.request(endPoint: endPoint)
-            .decode(type: SearchResultDTO.self, decoder: Json.decoder)
-            .subscribe { _ in
+        self.sut.request(endPoint: endPoint)
+            .subscribe(onNext: { _ in
                 XCTFail()
+            }, onError: { _ in
+                //then
+                XCTAssertTrue(true)
                 promise.fulfill()
-            } onError: { error in
-                let result = error as! NetworkError
-                let expected = NetworkError.statusCodeError(statusCode: 400)
-                XCTAssertEqual(expected, result)
-                promise.fulfill()
-            }
-        wait(for: [promise], timeout: 10)
+            })
+            .disposed(by: self.disposeBag)
+        wait(for: [promise], timeout: 5)
     }
 }
