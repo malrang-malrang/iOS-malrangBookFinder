@@ -27,6 +27,7 @@
 		30C76AF428F697F7001C56DE /* EndpointStrage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF328F697F7001C56DE /* EndpointStrage.swift */; };
 		30C76AF828F698D7001C56DE /* BookSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF728F698D7001C56DE /* BookSearchRequest.swift */; };
 		30C76AFA28F69AA6001C56DE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AF928F69AA6001C56DE /* NetworkManager.swift */; };
+		30C76AFD28F69DBD001C56DE /* GoogleBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AFC28F69DBD001C56DE /* GoogleBooksRepository.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
 		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
@@ -79,6 +80,7 @@
 		30C76AF328F697F7001C56DE /* EndpointStrage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointStrage.swift; sourceTree = "<group>"; };
 		30C76AF728F698D7001C56DE /* BookSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRequest.swift; sourceTree = "<group>"; };
 		30C76AF928F69AA6001C56DE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		30C76AFC28F69DBD001C56DE /* GoogleBooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksRepository.swift; sourceTree = "<group>"; };
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D057A528F6720A00AC931D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				3063A10728F67E08002624EC /* Model */,
+				30C76AFB28F69D98001C56DE /* Repository */,
 				30C76AE328F687E5001C56DE /* NetworkManager */,
 			);
 			path = Data;
@@ -272,6 +275,14 @@
 				30C76AF728F698D7001C56DE /* BookSearchRequest.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		30C76AFB28F69D98001C56DE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				30C76AFC28F69DBD001C56DE /* GoogleBooksRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		30D0579728F6720A00AC931D = {
@@ -583,6 +594,7 @@
 				30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */,
 				3063A11628F6860C002624EC /* PanelizationSummaryDTO.swift in Sources */,
 				30C76AF028F68B1A001C56DE /* Json.swift in Sources */,
+				30C76AFD28F69DBD001C56DE /* GoogleBooksRepository.swift in Sources */,
 				30C76AF228F69780001C56DE /* Endpoint.swift in Sources */,
 				3063A11828F6861E002624EC /* ImageLinksDTO.swift in Sources */,
 				30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */,
