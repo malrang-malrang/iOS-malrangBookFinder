@@ -7,7 +7,11 @@
 
 import RxSwift
 
-final class NetworkManager {
+protocol Networkable {
+    func request(endPoint: Endpoint) -> Observable<Data>
+}
+
+final class NetworkManager: Networkable {
     private let urlSession: URLSession
 
     init(urlSession: URLSession = URLSession.shared) {
