@@ -18,6 +18,7 @@
 		3063A11A28F6866A002624EC /* LayerInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11928F6866A002624EC /* LayerInfoDTO.swift */; };
 		3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11B28F68697002624EC /* SaleInformationDTO.swift */; };
 		3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11D28F686C0002624EC /* AccessInformationDTO.swift */; };
+		30C76AE528F6881A001C56DE /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE428F6881A001C56DE /* HttpMethod.swift */; };
 		30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A328F6720A00AC931D /* AppDelegate.swift */; };
 		30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A528F6720A00AC931D /* SceneDelegate.swift */; };
 		30D057A828F6720A00AC931D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D057A728F6720A00AC931D /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		3063A11928F6866A002624EC /* LayerInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerInfoDTO.swift; sourceTree = "<group>"; };
 		3063A11B28F68697002624EC /* SaleInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleInformationDTO.swift; sourceTree = "<group>"; };
 		3063A11D28F686C0002624EC /* AccessInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessInformationDTO.swift; sourceTree = "<group>"; };
+		30C76AE428F6881A001C56DE /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		30D057A028F6720A00AC931D /* iOS-malrangBookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-malrangBookFinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D057A328F6720A00AC931D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D057A528F6720A00AC931D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				3063A10728F67E08002624EC /* Model */,
+				30C76AE328F687E5001C56DE /* NetworkManager */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -199,6 +202,14 @@
 				3063A11D28F686C0002624EC /* AccessInformationDTO.swift */,
 			);
 			path = GoogleBooksDTO;
+			sourceTree = "<group>";
+		};
+		30C76AE328F687E5001C56DE /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				30C76AE428F6881A001C56DE /* HttpMethod.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		30D0579728F6720A00AC931D = {
@@ -498,6 +509,7 @@
 				3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */,
 				30D057A828F6720A00AC931D /* ViewController.swift in Sources */,
 				3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */,
+				30C76AE528F6881A001C56DE /* HttpMethod.swift in Sources */,
 				3063A11028F685BA002624EC /* IndustryIdentifiersDTO.swift in Sources */,
 				30D057A428F6720A00AC931D /* AppDelegate.swift in Sources */,
 				3063A11628F6860C002624EC /* PanelizationSummaryDTO.swift in Sources */,
