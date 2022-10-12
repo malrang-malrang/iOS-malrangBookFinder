@@ -29,5 +29,12 @@ final class AppCoordinator: Coordinator {
         self.navigationController = navigationController
     }
 
-    func start() {}
+    func start() {
+        let mainCoordinator = MainViewCoordinator(
+            navigationController: self.navigationController,
+            parentCoordinators: self
+        )
+        self.childCoordinators.append(mainCoordinator)
+        mainCoordinator.start()
+    }
 }
