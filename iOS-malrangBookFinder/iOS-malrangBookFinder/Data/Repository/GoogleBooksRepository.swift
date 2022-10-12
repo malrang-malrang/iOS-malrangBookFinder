@@ -7,7 +7,7 @@
 
 import RxSwift
 
-final class GoogleBooksRepository {
+final class GoogleBooksRepository: GoogleBooksRepositoryProtocol {
     private let networkManger: Networkable
 
     init(networkManger: Networkable = NetworkManager()) {
