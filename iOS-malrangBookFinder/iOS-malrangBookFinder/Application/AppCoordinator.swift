@@ -11,6 +11,7 @@ protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get }
     var parentCoordinators: Coordinator? { get set }
     var childCoordinators: [Coordinator] { get set }
+    func start()
 }
 
 extension Coordinator {
