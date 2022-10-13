@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ImageDownloadError: Error {
+enum ImageDownloadError: LocalizedError {
     case unknownError
     case statusCodeError(statusCode: Int)
     case emptyDataError
