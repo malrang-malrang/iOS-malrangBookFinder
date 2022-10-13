@@ -13,24 +13,36 @@ private enum Const {
 }
 
 enum EndPointStrage {
-    case searchBookList(title: String)
+    case searchBookList(title: String, startIndex: Int, maxResult: Int)
 }
 
 extension EndPointStrage {
     var endpoint: Endpoint {
         switch self {
-        case .searchBookList(title: let title):
-            return self.searchBookList(title: title)
+        case .searchBookList(
+            title: let title,
+            startIndex: let startIndex,
+            maxResult: let maxResult
+        ):
+            return self.searchBookList(
+                text: title,
+                startIndex: startIndex,
+                maxResult: maxResult
+            )
         }
     }
 }
 
 extension EndPointStrage {
-    private func searchBookList(title: String) -> Endpoint {
+    private func searchBookList(
+        text: String,
+        startIndex: Int,
+        maxResult: Int
+    ) -> Endpoint {
         let queryParameter = BookSearchRequest(
-            title: title,
-            startIndex: 0,
-            maxResult: 20,
+            title: text,
+            startIndex: startIndex,
+            maxResult: maxResult,
             projection: .full
         )
 

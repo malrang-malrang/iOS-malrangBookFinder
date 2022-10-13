@@ -7,18 +7,30 @@
 
 import RxSwift
 
-protocol UseCaseProtocol {
-    func searchBookList(title: String) -> Observable<SearchResult>
+protocol BookListSearchUseCaseProtocol {
+    func searchBookList(
+        text: String,
+        startIndex: Int,
+        maxResult: Int
+    ) -> Observable<SearchResult>
 }
 
-final class BookListSearchUseCase: UseCaseProtocol {
+final class BookListSearchUseCase: BookListSearchUseCaseProtocol {
     private let googleBooksRepository: GoogleBooksRepositoryProtocol
 
     init(googleBooksRepository: GoogleBooksRepositoryProtocol) {
         self.googleBooksRepository = googleBooksRepository
     }
 
-    func searchBookList(title: String) -> Observable<SearchResult> {
-        return self.googleBooksRepository.searchBookList(title: title)
+    func searchBookList(
+        text: String,
+        startIndex: Int,
+        maxResult: Int
+    ) -> Observable<SearchResult> {
+        return self.googleBooksRepository.searchBookList(
+            title: text,
+            startIndex: startIndex,
+            maxResult: maxResult
+        )
     }
 }
