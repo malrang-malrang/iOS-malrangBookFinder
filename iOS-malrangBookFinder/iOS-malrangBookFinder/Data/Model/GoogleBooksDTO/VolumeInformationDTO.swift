@@ -33,3 +33,18 @@ struct VolumeInformationDTO: Decodable {
     let infoLink: String?
     let canonicalVolumeLink: String?
 }
+
+extension VolumeInformationDTO {
+    func toDomain() -> VolumeInformation {
+        return VolumeInformation(
+            title: self.title,
+            authors: self.authors,
+            publisher: self.publisher,
+            publishedDate: self.publishedDate,
+            description: self.description,
+            pageCount: self.pageCount,
+            categories: self.categories,
+            imageLinks: self.imageLinks?.toDomain()
+        )
+    }
+}

@@ -17,3 +17,9 @@ struct BookInformationDTO: Decodable {
     let saleInfo: SaleInformationDTO?
     let accessInfo: AccessInformationDTO?
 }
+
+extension BookInformationDTO {
+    func toDomain() -> BookInformation {
+        return BookInformation(volumeInfo: self.volumeInfo.map { $0.toDomain() })
+    }
+}
