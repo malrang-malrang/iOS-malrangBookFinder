@@ -19,6 +19,7 @@
 		3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11B28F68697002624EC /* SaleInformationDTO.swift */; };
 		3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11D28F686C0002624EC /* AccessInformationDTO.swift */; };
 		306D434428F738C500F45BCB /* UIView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D434328F738C500F45BCB /* UIView+Sugar.swift */; };
+		306D434D28F73E4A00F45BCB /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D434C28F73E4A00F45BCB /* SearchResultCell.swift */; };
 		30C76AE528F6881A001C56DE /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE428F6881A001C56DE /* HttpMethod.swift */; };
 		30C76AE728F688C6001C56DE /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE628F688C6001C56DE /* NetworError.swift */; };
 		30C76AE928F689DB001C56DE /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE828F689DB001C56DE /* Requestable.swift */; };
@@ -80,6 +81,7 @@
 		3063A11B28F68697002624EC /* SaleInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleInformationDTO.swift; sourceTree = "<group>"; };
 		3063A11D28F686C0002624EC /* AccessInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessInformationDTO.swift; sourceTree = "<group>"; };
 		306D434328F738C500F45BCB /* UIView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Sugar.swift"; sourceTree = "<group>"; };
+		306D434C28F73E4A00F45BCB /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		30C76AE428F6881A001C56DE /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		30C76AE628F688C6001C56DE /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
 		30C76AE828F689DB001C56DE /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
@@ -241,6 +243,14 @@
 			path = GoogleBooksDTO;
 			sourceTree = "<group>";
 		};
+		306D434B28F73E3400F45BCB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				306D434C28F73E4A00F45BCB /* SearchResultCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		30C76AE328F687E5001C56DE /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +371,7 @@
 			children = (
 				30D057A728F6720A00AC931D /* MainViewController.swift */,
 				30C76B1928F6EEE8001C56DE /* SearchView.swift */,
+				306D434B28F73E3400F45BCB /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -663,7 +674,9 @@
 				30C76B1128F6E4EF001C56DE /* AppCoordinator.swift in Sources */,
 				3063A10E28F685A8002624EC /* VolumeInformationDTO.swift in Sources */,
 				3063A11A28F6866A002624EC /* LayerInfoDTO.swift in Sources */,
+				306D434D28F73E4A00F45BCB /* SearchResultCell.swift in Sources */,
 				3063A11228F685E7002624EC /* ReadingModesDTO.swift in Sources */,
+				306D434A28F73C8C00F45BCB /* BookListSearchUseCase.swift in Sources */,
 				30C76B0F28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift in Sources */,
 				3063A10A28F68556002624EC /* SearchResultDTO.swift in Sources */,
 				30C76AF428F697F7001C56DE /* EndpointStrage.swift in Sources */,
