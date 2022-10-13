@@ -14,12 +14,27 @@ final class SearchResultCell: UITableViewCell {
         return String(describing: Self.self)
     }
 
+    private let contentStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        return stackView
+    }()
+
     private let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 5
         return imageView
+    }()
+
+    private let informationStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 10
+        stackView.distribution = .equalSpacing
+        return stackView
     }()
 
     private let titleLabel: UILabel = {
@@ -55,8 +70,12 @@ final class SearchResultCell: UITableViewCell {
     private func setupContentView() {
         self.accessoryType = .disclosureIndicator
         self.contentView.backgroundColor = .systemBackground
-        self.contentView.addSubviews(
+        self.contentView.addSubview(self.contentStackView)
+        self.contentStackView.addArrangedSubviews(
             self.thumbnailImageView,
+            self.informationStackView
+        )
+        self.informationStackView.addArrangedSubviews(
             self.titleLabel,
             self.authorLabel,
             self.publishedDateLabel
@@ -64,28 +83,13 @@ final class SearchResultCell: UITableViewCell {
     }
 
     private func setupConstraint() {
+        self.contentStackView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(10)
+        }
+
         self.thumbnailImageView.snp.makeConstraints {
-            $0.top.leading.bottom.equalToSuperview().inset(10)
-            $0.width.equalToSuperview().dividedBy(4)
+            $0.width.equalToSuperview().multipliedBy(0.3)
             $0.height.equalTo(self.thumbnailImageView.snp.width)
-        }
-
-        self.titleLabel.snp.makeConstraints {
-            $0.top.equalTo(self.thumbnailImageView.snp.top)
-            $0.leading.equalTo(self.thumbnailImageView.snp.trailing).offset(10)
-            $0.trailing.equalToSuperview().offset(20)
-        }
-
-        self.authorLabel.snp.makeConstraints {
-            $0.centerY.equalTo(self.thumbnailImageView.snp.centerY)
-            $0.leading.equalTo(self.thumbnailImageView.snp.trailing).offset(10)
-            $0.trailing.equalToSuperview().offset(20)
-        }
-
-        self.publishedDateLabel.snp.makeConstraints {
-            $0.bottom.equalTo(self.thumbnailImageView.snp.bottom)
-            $0.leading.equalTo(self.thumbnailImageView.snp.trailing).offset(10)
-            $0.trailing.equalToSuperview().offset(20)
         }
     }
 
