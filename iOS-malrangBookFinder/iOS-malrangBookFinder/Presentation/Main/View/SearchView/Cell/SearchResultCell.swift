@@ -84,7 +84,7 @@ final class SearchResultCell: UITableViewCell {
 
     private func setupConstraint() {
         self.contentStackView.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(10)
+            $0.edges.equalToSuperview().inset(5)
         }
 
         self.thumbnailImageView.snp.makeConstraints {
