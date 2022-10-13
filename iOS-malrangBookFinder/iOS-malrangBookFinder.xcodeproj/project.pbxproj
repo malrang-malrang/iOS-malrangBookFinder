@@ -19,6 +19,7 @@
 		3063A11C28F68697002624EC /* SaleInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11B28F68697002624EC /* SaleInformationDTO.swift */; };
 		3063A11E28F686C0002624EC /* AccessInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063A11D28F686C0002624EC /* AccessInformationDTO.swift */; };
 		306D434428F738C500F45BCB /* UIView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D434328F738C500F45BCB /* UIView+Sugar.swift */; };
+		306D434728F73A9900F45BCB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D434628F73A9900F45BCB /* SearchViewModel.swift */; };
 		306D434A28F73C8C00F45BCB /* BookListSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D434928F73C8C00F45BCB /* BookListSearchUseCase.swift */; };
 		306D434D28F73E4A00F45BCB /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D434C28F73E4A00F45BCB /* SearchResultCell.swift */; };
 		306D435228F7D8D600F45BCB /* SearchResultCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D435128F7D8D600F45BCB /* SearchResultCellViewModel.swift */; };
@@ -90,6 +91,7 @@
 		3063A11B28F68697002624EC /* SaleInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleInformationDTO.swift; sourceTree = "<group>"; };
 		3063A11D28F686C0002624EC /* AccessInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessInformationDTO.swift; sourceTree = "<group>"; };
 		306D434328F738C500F45BCB /* UIView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Sugar.swift"; sourceTree = "<group>"; };
+		306D434628F73A9900F45BCB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		306D434928F73C8C00F45BCB /* BookListSearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListSearchUseCase.swift; sourceTree = "<group>"; };
 		306D434C28F73E4A00F45BCB /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		306D435128F7D8D600F45BCB /* SearchResultCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCellViewModel.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				30C76B1928F6EEE8001C56DE /* SearchView.swift */,
+				306D434628F73A9900F45BCB /* SearchViewModel.swift */,
 				306D434B28F73E3400F45BCB /* Cell */,
 			);
 			path = SearchView;
@@ -735,6 +738,7 @@
 				306D435C28F7F92800F45BCB /* ImageDownloadError.swift in Sources */,
 				3063A11A28F6866A002624EC /* LayerInfoDTO.swift in Sources */,
 				306D434D28F73E4A00F45BCB /* SearchResultCell.swift in Sources */,
+				306D434728F73A9900F45BCB /* SearchViewModel.swift in Sources */,
 				3063A11228F685E7002624EC /* ReadingModesDTO.swift in Sources */,
 				306D434A28F73C8C00F45BCB /* BookListSearchUseCase.swift in Sources */,
 				30C76B0F28F6CCF3001C56DE /* GoogleBooksRepositoryProtocol.swift in Sources */,
