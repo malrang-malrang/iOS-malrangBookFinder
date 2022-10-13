@@ -26,6 +26,7 @@
 		306D435728F7F89000F45BCB /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D435628F7F89000F45BCB /* ImageCacheManager.swift */; };
 		306D435A28F7F8F100F45BCB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D435928F7F8F100F45BCB /* ImageDownloader.swift */; };
 		306D435C28F7F92800F45BCB /* ImageDownloadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D435B28F7F92800F45BCB /* ImageDownloadError.swift */; };
+		306D435E28F7FBA800F45BCB /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D435D28F7FBA800F45BCB /* UIImageView+Sugar.swift */; };
 		30C76AE528F6881A001C56DE /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE428F6881A001C56DE /* HttpMethod.swift */; };
 		30C76AE728F688C6001C56DE /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE628F688C6001C56DE /* NetworError.swift */; };
 		30C76AE928F689DB001C56DE /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE828F689DB001C56DE /* Requestable.swift */; };
@@ -94,6 +95,7 @@
 		306D435628F7F89000F45BCB /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		306D435928F7F8F100F45BCB /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		306D435B28F7F92800F45BCB /* ImageDownloadError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadError.swift; sourceTree = "<group>"; };
+		306D435D28F7FBA800F45BCB /* UIImageView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Sugar.swift"; sourceTree = "<group>"; };
 		30C76AE428F6881A001C56DE /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		30C76AE628F688C6001C56DE /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
 		30C76AE828F689DB001C56DE /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				30C76AEC28F68AEC001C56DE /* Encodable+Sugar.swift */,
+				306D435D28F7FBA800F45BCB /* UIImageView+Sugar.swift */,
 				306D434328F738C500F45BCB /* UIView+Sugar.swift */,
 			);
 			path = Extension;
@@ -736,6 +739,7 @@
 				3063A11428F685FE002624EC /* DimensionsDTO.swift in Sources */,
 				30C76AE928F689DB001C56DE /* Requestable.swift in Sources */,
 				30C76B1628F6EA48001C56DE /* MainCoordinator.swift in Sources */,
+				306D435E28F7FBA800F45BCB /* UIImageView+Sugar.swift in Sources */,
 				306D435A28F7F8F100F45BCB /* ImageDownloader.swift in Sources */,
 				3063A10C28F68572002624EC /* BookInformationDTO.swift in Sources */,
 			);
