@@ -18,6 +18,7 @@ final class SearchResultCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.alignment = .center
+        stackView.spacing = 5
         return stackView
     }()
 
@@ -98,5 +99,13 @@ final class SearchResultCell: UITableViewCell {
         self.titleLabel.text = viewModel.title
         self.authorLabel.text = viewModel.authors
         self.publishedDateLabel.text = viewModel.publishedDate
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.thumbnailImageView.image = nil
+        self.titleLabel.text = nil
+        self.authorLabel.text = nil
+        self.publishedDateLabel.text = nil
     }
 }
