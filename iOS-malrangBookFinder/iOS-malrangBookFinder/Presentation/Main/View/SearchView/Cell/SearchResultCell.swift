@@ -15,8 +15,8 @@ final class SearchResultCell: UITableViewCell {
     }
 
     private let thumbnailImageView: UIImageView = {
-        let image = UIImage(named: "MalrangImage")
-        let imageView = UIImageView(image: image)
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 5
         return imageView
@@ -25,23 +25,20 @@ final class SearchResultCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .title3)
-        label.text = "책 이름"
         return label
     }()
 
     private let authorLabel: UILabel = {
         let label = UILabel()
-        label.font = .preferredFont(forTextStyle: .caption1)
+        label.font = .preferredFont(forTextStyle: .body)
         label.textColor = .systemGray
-        label.text = "작가 이름"
         return label
     }()
 
     private let publishedDateLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 14, weight: .light)
+        label.font = .preferredFont(forTextStyle: .body)
         label.textColor = .systemGray
-        label.text = "출판한 날짜"
         return label
     }()
 
@@ -92,7 +89,8 @@ final class SearchResultCell: UITableViewCell {
         }
     }
 
-    func configure(viewModel: SearchResultCellViewModelable) {
+    func bind(viewModel: SearchResultCellViewModelable) {
+        self.thumbnailImageView.setImage(with: viewModel.imageUrlString)
         self.titleLabel.text = viewModel.title
         self.authorLabel.text = viewModel.authors
         self.publishedDateLabel.text = viewModel.publishedDate

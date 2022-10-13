@@ -10,16 +10,16 @@ import Foundation
 protocol SearchResultCellViewModelable: SearchResultCellViewModelOutput {}
 
 protocol SearchResultCellViewModelOutput {
-    var imageUrlString: String? { get }
+    var imageUrlString: String { get }
     var title: String { get }
     var authors: String { get }
     var publishedDate: String { get }
 }
 
 private enum Const {
-    static let emptyInformation = "알 수 없음."
+    static let unknown = "알 수 없음"
     static let emptyString = ""
-    static let commaString = ","
+    static let authorsInformation = "%@ 외 %d명"
 }
 
 final class SearchResultCellViewModel: SearchResultCellViewModelable {
@@ -31,23 +31,27 @@ final class SearchResultCellViewModel: SearchResultCellViewModelable {
 
     // MARK: - Output
 
-    var imageUrlString: String? {
-        return self.bookInformation.volumeInfo?.imageLinks?.thumbnail
+    var imageUrlString: String {
+        return self.bookInformation.volumeInfo?.imageLinks?.thumbnail ?? Const.emptyString
     }
 
     var title: String {
-        return self.bookInformation.volumeInfo?.title ?? Const.emptyInformation
+        return self.bookInformation.volumeInfo?.title ?? Const.unknown
     }
 
     var authors: String {
         guard let authors = self.bookInformation.volumeInfo?.authors else {
-            return Const.emptyInformation
+            return Const.unknown
         }
 
-        return authors.reduce(Const.emptyString) { $0 + Const.commaString + $1 }
+        if authors.count > 1, let author = authors.first {
+            return String(format: Const.authorsInformation, author, authors.count - 1)
+        }
+
+        return authors.first ?? Const.unknown
     }
 
     var publishedDate: String {
-        return self.bookInformation.volumeInfo?.publishedDate ?? Const.emptyInformation
+        return self.bookInformation.volumeInfo?.publishedDate ?? Const.unknown
     }
 }
