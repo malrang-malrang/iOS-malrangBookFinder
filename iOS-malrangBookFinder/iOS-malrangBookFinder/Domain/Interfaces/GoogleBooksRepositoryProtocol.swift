@@ -8,5 +8,5 @@
 import RxSwift
 
 protocol GoogleBooksRepositoryProtocol {
-    func searchBookList(title: String) -> Observable<SearchResultDTO>
+    func searchBookList(title: String) -> Observable<SearchResult>
 }
