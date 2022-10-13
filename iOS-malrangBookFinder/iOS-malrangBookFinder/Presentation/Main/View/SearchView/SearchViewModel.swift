@@ -12,7 +12,7 @@ protocol SearchViewModelable: SearchViewModelInput, SearchViewModelOutput {}
 
 protocol SearchViewModelInput {
     func fetchFirstPage(text: String)
-    func fetchNextPage()
+    func fetchNextPage(lastRow: Int?)
 }
 
 protocol SearchViewModelOutput {
@@ -21,13 +21,16 @@ protocol SearchViewModelOutput {
     var error: Observable<Error> { get }
 }
 
+private enum Const {
+    static let emptyString = ""
+}
+
 final class SearchViewModel: SearchViewModelable {
     private let useCase: BookListSearchUseCaseProtocol
     private let disposeBag = DisposeBag()
-    private let bookInformationListRelay = PublishRelay<[BookInformation]>()
-    private let totalItemsRelay = PublishRelay<Int>()
+    private let bookInformationListRelay = BehaviorRelay<[BookInformation]>(value: [])
+    private let totalItemsRelay = BehaviorRelay<Int>(value: 0)
     private let errorRelay = PublishRelay<Error>()
-    private var searchedBookList: [BookInformation] = []
     private var searchedText: String?
     private var startIndex = 0
     private var maxResult = 20
@@ -52,21 +55,29 @@ final class SearchViewModel: SearchViewModelable {
     private func checkResult(searchResult: SearchResult) {
         guard let totalItems = searchResult.totalItems,
               let items = searchResult.items else {
-            self.errorRelay.accept(InputError.searchResultIsEmptyError)
-            return
+            return self.errorRelay.accept(InputError.searchResultIsEmptyError)
         }
-        self.searchedBookList.append(contentsOf: items)
         self.totalItemsRelay.accept(totalItems)
-        self.bookInformationListRelay.accept(searchedBookList + items)
+        self.bookInformationListRelay.accept(self.bookInformationListRelay.value + items)
+    }
+
+    private func clearResult() {
+        self.searchedText = nil
+        self.totalItemsRelay.accept(0)
+        self.bookInformationListRelay.accept([])
     }
 
     // MARK: - Input
 
     func fetchFirstPage(text: String) {
+        if text == Const.emptyString {
+            return self.clearResult()
+        }
+
         self.startIndex = 0
         self.maxResult = 20
         self.searchedText = text
-        self.searchedBookList = []
+        self.bookInformationListRelay.accept([])
         self.fetchBookList(
             text: text,
             startIndex: self.startIndex,
@@ -74,17 +85,17 @@ final class SearchViewModel: SearchViewModelable {
         )
     }
 
-    func fetchNextPage() {
-        guard let searchedText = searchedText else {
-            return
-        }
+    func fetchNextPage(lastRow: Int?) {
+        guard let searchedText = searchedText else { return }
 
-        self.startIndex += self.maxResult
-        self.fetchBookList(
-            text: searchedText,
-            startIndex: self.startIndex,
-            maxResult: self.maxResult
-        )
+        if lastRow == self.bookInformationListRelay.value.count - 1 {
+            self.startIndex += self.maxResult
+            self.fetchBookList(
+                text: searchedText,
+                startIndex: self.startIndex,
+                maxResult: self.maxResult
+            )
+        }
     }
 
     // MARK: - Output

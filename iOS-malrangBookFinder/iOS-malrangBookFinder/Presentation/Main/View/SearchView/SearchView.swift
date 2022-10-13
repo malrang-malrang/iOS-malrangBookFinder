@@ -11,7 +11,7 @@ import SnapKit
 
 private enum Const {
     static let searchBarPlaceholder = "어떤책을 찾고 있나요?"
-    static let searchResultCount = "검색 결과 527 권"
+    static let searchResultCount = "검색 결과 %d 권"
 }
 
 final class SearchView: UIView {
@@ -44,10 +44,14 @@ final class SearchView: UIView {
         return tableView
     }()
 
+    private let coordinator: MainViewCoordinatorProtocol
+    private let viewModel: SearchViewModelable
     private let disposeBag = DisposeBag()
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(searchViewModel: SearchViewModelable, coordinator: MainViewCoordinatorProtocol) {
+        self.viewModel = searchViewModel
+        self.coordinator = coordinator
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0) )
         self.setupView()
         self.setupConstraint()
         self.bind()
@@ -91,12 +95,27 @@ final class SearchView: UIView {
     }
 
     private func bind() {
-        let sampleData = NSDataAsset(name: "GoogleBooksSampleData")
-            .map { $0.data }!
+        self.viewModel.error
+            .observe(on: MainScheduler.instance)
+            .bind { [weak self] error in
+//                self?.coordinator
+            }
+            .disposed(by: self.disposeBag)
 
-        Observable.of(sampleData)
-            .decode(type: SearchResultDTO.self, decoder: Json.decoder)
-            .compactMap { $0.items }
+        self.searchBar.searchTextField.rx.controlEvent(.editingDidEndOnExit)
+            .bind { self.endEditing(true) }
+            .disposed(by: disposeBag)
+
+        self.searchBar.rx.text.orEmpty
+            .debounce(RxTimeInterval.milliseconds(5), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .bind { [weak self] text in
+                self?.viewModel.fetchFirstPage(text: text)
+            }
+            .disposed(by: self.disposeBag)
+
+        self.viewModel.bookInformationList
+            .observe(on: MainScheduler.instance)
             .bind(to: self.searchResultTableView.rx.items) { tableView, row, element in
                 guard let cell = tableView.dequeueReusableCell(
                     withIdentifier: SearchResultCell.identifier,
@@ -105,18 +124,35 @@ final class SearchView: UIView {
                     return UITableViewCell()
                 }
 
-                let cellViewModel = SearchResultCellViewModel(bookInformation: element.toDomain())
+                let cellViewModel = SearchResultCellViewModel(bookInformation: element)
                 cell.bind(viewModel: cellViewModel)
 
                 return cell
             }
             .disposed(by: self.disposeBag)
 
+        self.viewModel.totalItems
+            .observe(on: MainScheduler.instance)
+            .map { String(format: Const.searchResultCount, $0) }
+            .bind(to: self.searchResultCountLabel.rx.text)
+            .disposed(by: self.disposeBag)
+
         self.searchResultTableView.rx.itemSelected
-            .withUnretained(self)
-            .subscribe(onNext: { searchView, indexPath in
-                searchView.searchResultTableView.deselectRow(at: indexPath, animated: true)
-            })
+            .bind { [weak self] indexPath in
+                self?.searchResultTableView.deselectRow(at: indexPath, animated: true)
+            }
+            .disposed(by: self.disposeBag)
+
+        self.searchResultTableView.rx.modelSelected(BookInformation.self)
+            .bind { [weak self] bookInformation in
+//                self?.coordinator.showDetailView(productId: product.id)
+            }
+            .disposed(by: self.disposeBag)
+
+        self.searchResultTableView.rx.prefetchRows
+            .bind { [weak self] indexPath in
+                self?.viewModel.fetchNextPage(lastRow: indexPath.last?.row)
+            }
             .disposed(by: self.disposeBag)
     }
 }
