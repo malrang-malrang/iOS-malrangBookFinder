@@ -24,6 +24,7 @@ final class AppCoordinator: Coordinator {
     var navigationController: UINavigationController
     var parentCoordinators: Coordinator?
     var childCoordinators: [Coordinator] = []
+    private let bookSearchUseCase = BookListSearchUseCase(googleBooksRepository: GoogleBooksRepository())
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -32,7 +33,8 @@ final class AppCoordinator: Coordinator {
     func start() {
         let mainCoordinator = MainViewCoordinator(
             navigationController: self.navigationController,
-            parentCoordinators: self
+            parentCoordinators: self,
+            bookSearchUseCase: self.bookSearchUseCase
         )
         self.childCoordinators.append(mainCoordinator)
         mainCoordinator.start()

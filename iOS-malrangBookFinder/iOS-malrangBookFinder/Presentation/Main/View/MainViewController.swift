@@ -23,8 +23,11 @@ final class MainViewController: UIViewController {
 
     private let searchView: SearchView
 
-    init() {
-        self.searchView = SearchView()
+    init(searchViewModel: SearchViewModelable, coordinator: MainViewCoordinatorProtocol) {
+        self.searchView = SearchView(
+            searchViewModel: searchViewModel,
+            coordinator: coordinator
+        )
         super.init(nibName: nil, bundle: nil)
     }
 

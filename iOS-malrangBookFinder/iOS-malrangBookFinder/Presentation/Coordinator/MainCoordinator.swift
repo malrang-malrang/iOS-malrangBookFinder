@@ -15,18 +15,22 @@ final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
     var navigationController: UINavigationController
     var parentCoordinators: Coordinator?
     var childCoordinators: [Coordinator] = []
+    private let bookSearchUseCase: BookListSearchUseCaseProtocol
 
     init(
         navigationController: UINavigationController,
         parentCoordinators: Coordinator? = nil,
-        childCoordinators: [Coordinator] = []
+        childCoordinators: [Coordinator] = [],
+        bookSearchUseCase: BookListSearchUseCaseProtocol
     ) {
         self.navigationController = navigationController
         self.parentCoordinators = parentCoordinators
+        self.bookSearchUseCase = bookSearchUseCase
     }
 
     func start() {
-        let mainView = MainViewController()
+        let searchViewModel = SearchViewModel(useCase: self.bookSearchUseCase)
+        let mainView = MainViewController(searchViewModel: searchViewModel, coordinator: self)
         self.navigationController.pushViewController(mainView, animated: true)
     }
 }
