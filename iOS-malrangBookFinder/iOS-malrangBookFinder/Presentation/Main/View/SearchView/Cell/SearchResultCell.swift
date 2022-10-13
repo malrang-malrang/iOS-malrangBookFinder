@@ -24,7 +24,7 @@ final class SearchResultCell: UITableViewCell {
 
     private let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 5
         return imageView
