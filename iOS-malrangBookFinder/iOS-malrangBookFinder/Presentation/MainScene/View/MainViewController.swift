@@ -18,12 +18,6 @@ final class MainViewController: UIViewController {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .largeTitle)
         label.text = Const.navigationTitlt
-        
-//        let largeTitleFont = UIFont.preferredFont(forTextStyle: .largeTitle)
-//        label.attributedText = NSAttributedString(
-//            string: Const.navigationTitlt,
-//            attributes: [.foregroundColor: ColorPalette.malrangPink, .font: largeTitleFont]
-//        )
         return label
     }()
 
