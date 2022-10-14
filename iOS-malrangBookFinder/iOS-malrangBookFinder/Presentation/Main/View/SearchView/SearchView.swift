@@ -19,6 +19,7 @@ final class SearchView: UIView {
         let searchBar = UISearchBar()
         searchBar.placeholder = Const.searchBarPlaceholder
         searchBar.searchBarStyle = .minimal
+        searchBar.searchTextField.tintColor = ColorPalette.malrangPink
         return searchBar
     }()
 
