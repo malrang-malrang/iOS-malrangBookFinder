@@ -14,6 +14,13 @@ private enum Const {
 }
 
 final class SubInformationView: UIView {
+    private let contentsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 10
+        return stackView
+    }()
+
     private let bookInformationLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .title2)
