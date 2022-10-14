@@ -31,11 +31,18 @@ final class DetailScrollView: UIScrollView {
         return subInformationView
     }()
 
-    private let descriptionView: DescriptionInformationView = {
+    private let descriptionInformationView: DescriptionInformationView = {
         let descriptionView = DescriptionInformationView()
         descriptionView.clipsToBounds = true
         descriptionView.layer.cornerRadius = 10
         return descriptionView
+    }()
+
+    private let publishInformationView: PublishInformationView = {
+        let publishInformationView = PublishInformationView()
+        publishInformationView.clipsToBounds = true
+        publishInformationView.layer.cornerRadius = 10
+        return publishInformationView
     }()
 
     private let viewModel: DetailViewModelable
@@ -58,7 +65,8 @@ final class DetailScrollView: UIScrollView {
         self.contentsStackView.addArrangedSubviews(
             self.mainInformationView,
             self.subInformationView,
-            self.descriptionView
+            self.descriptionInformationView,
+            self.publishInformationView
         )
     }
 
@@ -71,11 +79,16 @@ final class DetailScrollView: UIScrollView {
         self.subInformationView.snp.makeConstraints {
             $0.height.equalTo(110)
         }
+
+        self.publishInformationView.snp.makeConstraints {
+            $0.height.equalTo(110)
+        }
     }
 
     private func bind() {
         self.mainInformationView.bind(viewModel: self.viewModel)
         self.subInformationView.bind(viewModel: self.viewModel)
-        self.descriptionView.bind(viewModel: self.viewModel)
+        self.descriptionInformationView.bind(viewModel: self.viewModel)
+        self.publishInformationView.bind(viewModel: self.viewModel)
     }
 }
