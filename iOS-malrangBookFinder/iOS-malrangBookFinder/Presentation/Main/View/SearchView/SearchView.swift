@@ -99,7 +99,10 @@ final class SearchView: UIView {
         self.viewModel.error
             .observe(on: MainScheduler.instance)
             .bind { [weak self] error in
-//                self?.coordinator
+                self?.coordinator.showErrorAlert(
+                    title: error.identifier,
+                    message: error.errorMessage
+                )
             }
             .disposed(by: self.disposeBag)
 
