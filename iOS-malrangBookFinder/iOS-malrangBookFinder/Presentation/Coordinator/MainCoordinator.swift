@@ -7,9 +7,7 @@
 
 import UIKit
 
-protocol MainViewCoordinatorProtocol {
-
-}
+protocol MainViewCoordinatorProtocol: Alertable {}
 
 final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
     var navigationController: UINavigationController
