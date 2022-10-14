@@ -7,12 +7,12 @@
 
 import UIKit
 
-enum SystemImage {
+enum CustomImage {
     enum Atribute {
         static let configuration = UIImage.SymbolConfiguration(pointSize: 30, weight: .heavy)
     }
 
-    static let  malrang = UIImage(systemName: "MalrangImage")
+    static let malrang = UIImage(named: "MalrangImage")
 
     static let back = UIImage(
         systemName: "arrowshape.turn.up.backward.fill",

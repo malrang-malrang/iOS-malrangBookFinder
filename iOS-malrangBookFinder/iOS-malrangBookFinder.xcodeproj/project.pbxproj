@@ -36,7 +36,7 @@
 		309693A128F9478C000B804A /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309693A028F9478C000B804A /* LoadingIndicatorView.swift */; };
 		309693A528F952B1000B804A /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309693A428F952B1000B804A /* DetailCoordinator.swift */; };
 		309693A828F954FF000B804A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309693A728F954FF000B804A /* DetailViewController.swift */; };
-		309693AC28F959C5000B804A /* SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309693AB28F959C5000B804A /* SystemImage.swift */; };
+		309693AC28F959C5000B804A /* CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309693AB28F959C5000B804A /* CustomImage.swift */; };
 		309693AE28F95B03000B804A /* MainInformationVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309693AD28F95B03000B804A /* MainInformationVIew.swift */; };
 		309693B128F96807000B804A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309693B028F96807000B804A /* DetailViewModel.swift */; };
 		309693B428F97189000B804A /* SubInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309693B328F97189000B804A /* SubInformationView.swift */; };
@@ -119,7 +119,7 @@
 		309693A028F9478C000B804A /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		309693A428F952B1000B804A /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		309693A728F954FF000B804A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		309693AB28F959C5000B804A /* SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImage.swift; sourceTree = "<group>"; };
+		309693AB28F959C5000B804A /* CustomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImage.swift; sourceTree = "<group>"; };
 		309693AD28F95B03000B804A /* MainInformationVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInformationVIew.swift; sourceTree = "<group>"; };
 		309693B028F96807000B804A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		309693B328F97189000B804A /* SubInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubInformationView.swift; sourceTree = "<group>"; };
@@ -362,7 +362,7 @@
 		309693AA28F959A7000B804A /* SystemImage */ = {
 			isa = PBXGroup;
 			children = (
-				309693AB28F959C5000B804A /* SystemImage.swift */,
+				309693AB28F959C5000B804A /* CustomImage.swift */,
 			);
 			path = SystemImage;
 			sourceTree = "<group>";
@@ -839,7 +839,7 @@
 				309693AE28F95B03000B804A /* MainInformationVIew.swift in Sources */,
 				309693A828F954FF000B804A /* DetailViewController.swift in Sources */,
 				3063A11028F685BA002624EC /* IndustryIdentifiersDTO.swift in Sources */,
-				309693AC28F959C5000B804A /* SystemImage.swift in Sources */,
+				309693AC28F959C5000B804A /* CustomImage.swift in Sources */,
 				306D435228F7D8D600F45BCB /* SearchResultCellViewModel.swift in Sources */,
 				309693B628F97EF2000B804A /* DescriptionInformationView.swift in Sources */,
 				309693B128F96807000B804A /* DetailViewModel.swift in Sources */,

@@ -12,7 +12,7 @@ import SnapKit
 final class DetailViewController: UIViewController {
     private let backBarButton: UIBarButtonItem = {
         let barButtonItem = UIBarButtonItem(
-            image: SystemImage.back,
+            image: CustomImage.back,
             style: .plain,
             target: nil,
             action: nil
