@@ -15,3 +15,9 @@ struct ImageLinksDTO: Decodable {
     let large: String?
     let extraLarge: String?
 }
+
+extension ImageLinksDTO {
+    func toDomain() -> ImageLinks {
+        return ImageLinks(thumbnail: self.thumbnail, small: self.small)
+    }
+}

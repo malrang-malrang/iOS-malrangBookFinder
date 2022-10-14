@@ -14,9 +14,18 @@ final class GoogleBooksRepository: GoogleBooksRepositoryProtocol {
         self.networkManger = networkManger
     }
 
-    func searchBookList(title: String) -> Observable<SearchResultDTO> {
-        let endpoint = EndPointStrage.searchBookList(title: title).endpoint
+    func searchBookList(
+        title: String,
+        startIndex: Int,
+        maxResult: Int
+    ) -> Observable<SearchResult> {
+        let endpoint = EndPointStrage.searchBookList(
+            title: title,
+            startIndex: startIndex,
+            maxResult: maxResult
+        ).endpoint
         return self.networkManger.request(endPoint: endpoint)
             .decode(type: SearchResultDTO.self, decoder: Json.decoder)
+            .map { $0.toDomain() }
     }
 }

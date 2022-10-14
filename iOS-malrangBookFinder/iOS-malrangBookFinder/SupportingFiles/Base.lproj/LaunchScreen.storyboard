@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="malrangImage" translatesAutoresizingMaskIntoConstraints="NO" id="pcC-x2-Uss">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MalrangImage" translatesAutoresizingMaskIntoConstraints="NO" id="pcC-x2-Uss">
                                 <rect key="frame" x="129.66666666666666" y="357" width="130.99999999999997" height="130.33333333333337"/>
                             </imageView>
                         </subviews>
@@ -34,6 +34,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="malrangImage" width="131" height="130.33332824707031"/>
+        <image name="MalrangImage" width="131" height="130.33332824707031"/>
     </resources>
 </document>

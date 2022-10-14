@@ -19,7 +19,7 @@ enum Projection: String, Encodable {
 struct BookSearchRequest: Encodable {
     let q: String?
     let startIndex: Int?
-    let maxResult: Int?
+    let maxResults: Int?
     let projection: Projection?
 
     init(
@@ -30,7 +30,7 @@ struct BookSearchRequest: Encodable {
     ) {
         self.q = title
         self.startIndex = startIndex
-        self.maxResult = maxResult
+        self.maxResults = maxResult
         self.projection = projection
     }
 }

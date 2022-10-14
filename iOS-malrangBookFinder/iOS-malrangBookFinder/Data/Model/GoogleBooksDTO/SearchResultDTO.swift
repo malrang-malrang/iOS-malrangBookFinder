@@ -12,3 +12,12 @@ struct SearchResultDTO: Decodable {
     let totalItems: Int?
     let items: [BookInformationDTO]?
 }
+
+extension SearchResultDTO {
+    func toDomain() -> SearchResult {
+        return SearchResult(
+            totalItems: self.totalItems,
+            items: self.items?.map { $0.toDomain() }
+        )
+    }
+}
