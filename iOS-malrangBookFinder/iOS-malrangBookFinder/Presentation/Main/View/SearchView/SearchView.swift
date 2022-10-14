@@ -23,19 +23,19 @@ final class SearchView: UIView {
         return searchBar
     }()
 
-    private let searchResultCountView: UIView = {
+    private let resultCountView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray6
         return view
     }()
 
-    private let searchResultCountLabel: UILabel = {
+    private let resultCountLabel: UILabel = {
         let label = UILabel()
         label.text = Const.searchResultCount
         return label
     }()
 
-    private let searchResultTableView: UITableView = {
+    private let resultTableView: UITableView = {
         let tableView = UITableView()
         tableView.keyboardDismissMode = .onDrag
         tableView.register(
@@ -52,7 +52,7 @@ final class SearchView: UIView {
     init(searchViewModel: SearchViewModelable, coordinator: MainViewCoordinatorProtocol) {
         self.viewModel = searchViewModel
         self.coordinator = coordinator
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0) )
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         self.setupView()
         self.setupConstraint()
         self.bind()
@@ -66,10 +66,10 @@ final class SearchView: UIView {
         self.backgroundColor = .systemBackground
         self.addSubviews(
             self.searchBar,
-            self.searchResultCountView,
-            self.searchResultTableView
+            self.resultCountView,
+            self.resultTableView
         )
-        self.searchResultCountView.addSubview(self.searchResultCountLabel)
+        self.resultCountView.addSubview(self.resultCountLabel)
     }
 
     private func setupConstraint() {
@@ -78,19 +78,19 @@ final class SearchView: UIView {
             $0.leading.trailing.equalToSuperview().inset(15)
         }
 
-        self.searchResultCountView.snp.makeConstraints {
+        self.resultCountView.snp.makeConstraints {
             $0.top.equalTo(self.searchBar.snp.bottom).offset(1)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalToSuperview().dividedBy(20)
         }
 
-        self.searchResultCountLabel.snp.makeConstraints {
+        self.resultCountLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(10)
             $0.centerY.equalToSuperview()
         }
 
-        self.searchResultTableView.snp.makeConstraints {
-            $0.top.equalTo(self.searchResultCountView.snp.bottom).offset(1)
+        self.resultTableView.snp.makeConstraints {
+            $0.top.equalTo(self.resultCountView.snp.bottom).offset(1)
             $0.leading.trailing.bottom.equalToSuperview()
         }
     }
@@ -117,7 +117,7 @@ final class SearchView: UIView {
 
         self.viewModel.bookInformationList
             .observe(on: MainScheduler.instance)
-            .bind(to: self.searchResultTableView.rx.items) { tableView, row, element in
+            .bind(to: self.resultTableView.rx.items) { tableView, row, element in
                 guard let cell = tableView.dequeueReusableCell(
                     withIdentifier: SearchResultCell.identifier,
                     for: IndexPath(row: row, section: .zero)
@@ -135,22 +135,22 @@ final class SearchView: UIView {
         self.viewModel.totalItems
             .observe(on: MainScheduler.instance)
             .map { String(format: Const.searchResultCount, $0) }
-            .bind(to: self.searchResultCountLabel.rx.text)
+            .bind(to: self.resultCountLabel.rx.text)
             .disposed(by: self.disposeBag)
 
-        self.searchResultTableView.rx.itemSelected
+        self.resultTableView.rx.itemSelected
             .bind { [weak self] indexPath in
-                self?.searchResultTableView.deselectRow(at: indexPath, animated: true)
+                self?.resultTableView.deselectRow(at: indexPath, animated: true)
             }
             .disposed(by: self.disposeBag)
 
-        self.searchResultTableView.rx.modelSelected(BookInformation.self)
+        self.resultTableView.rx.modelSelected(BookInformation.self)
             .bind { [weak self] bookInformation in
 //                self?.coordinator.showDetailView(productId: product.id)
             }
             .disposed(by: self.disposeBag)
 
-        self.searchResultTableView.rx.prefetchRows
+        self.resultTableView.rx.prefetchRows
             .bind { [weak self] indexPath in
                 self?.viewModel.fetchNextPage(lastRow: indexPath.last?.row)
             }
