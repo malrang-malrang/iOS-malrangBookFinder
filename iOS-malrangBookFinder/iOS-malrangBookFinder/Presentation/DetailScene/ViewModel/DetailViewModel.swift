@@ -15,6 +15,7 @@ protocol DetailViewModelOutput {
     var authors: String { get }
     var categories: String { get }
     var pageCountString: String { get }
+    var description: String { get }
 }
 
 private enum Const {
@@ -71,5 +72,9 @@ final class DetailViewModel: DetailViewModelable {
         }
 
         return String(format: Const.pageCountString, pageCount)
+    }
+
+    var description: String {
+        return self.bookInformation.volumeInfo?.description ?? Const.unknown
     }
 }
