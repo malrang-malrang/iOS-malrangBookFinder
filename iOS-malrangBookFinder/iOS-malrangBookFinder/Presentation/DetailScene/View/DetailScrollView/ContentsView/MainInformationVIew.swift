@@ -26,7 +26,7 @@ final class MainInformationVIew: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .title2)
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         return label
     }()
 
@@ -34,6 +34,7 @@ final class MainInformationVIew: UIView {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .body)
         label.textColor = .systemGray
+        label.numberOfLines = 0
         return label
     }()
 

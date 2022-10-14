@@ -356,8 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				309693A728F954FF000B804A /* DetailViewController.swift */,
-				309693B728F98A04000B804A /* DetailScrollView.swift */,
-				309693B228F97167000B804A /* ContentsView */,
+				309693BA28F9B8B8000B804A /* DetailScrollView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,6 +385,15 @@
 				309693B528F97EF2000B804A /* DescriptionInformationView.swift */,
 			);
 			path = ContentsView;
+			sourceTree = "<group>";
+		};
+		309693BA28F9B8B8000B804A /* DetailScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				309693B728F98A04000B804A /* DetailScrollView.swift */,
+				309693B228F97167000B804A /* ContentsView */,
+			);
+			path = DetailScrollView;
 			sourceTree = "<group>";
 		};
 		30C76AE328F687E5001C56DE /* NetworkManager */ = {
