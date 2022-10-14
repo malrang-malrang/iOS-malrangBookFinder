@@ -24,7 +24,7 @@ final class LoadingIndicatorView: UIView {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.style = .large
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.color = ColorPalette.malrangPink
+        activityIndicator.color = ColorPalette.malrangDeepPink
         return activityIndicator
     }()
 
@@ -33,7 +33,7 @@ final class LoadingIndicatorView: UIView {
         label.font = .preferredFont(forTextStyle: .title2)
         label.attributedText = NSAttributedString(
             string: Const.loadingTextLabel,
-            attributes: [.foregroundColor: ColorPalette.malrangPink]
+            attributes: [.foregroundColor: ColorPalette.malrangDeepPink]
         )
         label.isHidden = true
         return label

@@ -10,17 +10,20 @@ import UIKit
 import SnapKit
 
 private enum Const {
-    static let navigationTitlt = "Malrang Book Finder"
+    static let navigationTitlt = "Book Finder"
 }
 
 final class MainViewController: UIViewController {
     private let navigationTitleLabel: UILabel = {
         let label = UILabel()
-        let largeTitleFont = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.attributedText = NSAttributedString(
-            string: Const.navigationTitlt,
-            attributes: [.foregroundColor: ColorPalette.malrangPink, .font: largeTitleFont]
-        )
+        label.font = .preferredFont(forTextStyle: .largeTitle)
+        label.text = Const.navigationTitlt
+        
+//        let largeTitleFont = UIFont.preferredFont(forTextStyle: .largeTitle)
+//        label.attributedText = NSAttributedString(
+//            string: Const.navigationTitlt,
+//            attributes: [.foregroundColor: ColorPalette.malrangPink, .font: largeTitleFont]
+//        )
         return label
     }()
 
@@ -50,7 +53,7 @@ final class MainViewController: UIViewController {
     }
 
     private func setupView() {
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = ColorPalette.malrangPink
         self.view.addSubview(self.searchView)
     }
 

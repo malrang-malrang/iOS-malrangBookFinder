@@ -19,7 +19,8 @@ final class SearchView: UIView {
         let searchBar = UISearchBar()
         searchBar.placeholder = Const.searchBarPlaceholder
         searchBar.searchBarStyle = .minimal
-        searchBar.searchTextField.tintColor = ColorPalette.malrangPink
+        searchBar.searchTextField.tintColor = ColorPalette.malrangDeepPink
+        searchBar.searchTextField.backgroundColor = .white
         return searchBar
     }()
 
@@ -64,7 +65,7 @@ final class SearchView: UIView {
     }
 
     private func setupView() {
-        self.backgroundColor = .systemBackground
+        self.backgroundColor = ColorPalette.malrangPink
         self.addSubviews(
             self.searchBar,
             self.resultCountView,
@@ -81,7 +82,7 @@ final class SearchView: UIView {
         }
 
         self.resultCountView.snp.makeConstraints {
-            $0.top.equalTo(self.searchBar.snp.bottom).offset(1)
+            $0.top.equalTo(self.searchBar.snp.bottom)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalToSuperview().dividedBy(20)
         }
@@ -92,7 +93,7 @@ final class SearchView: UIView {
         }
 
         self.resultTableView.snp.makeConstraints {
-            $0.top.equalTo(self.resultCountView.snp.bottom).offset(1)
+            $0.top.equalTo(self.resultCountView.snp.bottom)
             $0.leading.trailing.bottom.equalToSuperview()
         }
 
