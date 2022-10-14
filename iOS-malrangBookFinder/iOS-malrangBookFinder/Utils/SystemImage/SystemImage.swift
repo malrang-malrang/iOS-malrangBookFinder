@@ -12,6 +12,8 @@ enum SystemImage {
         static let configuration = UIImage.SymbolConfiguration(pointSize: 30, weight: .heavy)
     }
 
+    static let  malrang = UIImage(systemName: "MalrangImage")
+
     static let back = UIImage(
         systemName: "arrowshape.turn.up.backward.fill",
         withConfiguration: Atribute.configuration
