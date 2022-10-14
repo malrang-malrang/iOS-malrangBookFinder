@@ -28,6 +28,13 @@ final class DetailViewController: UIViewController {
         return mainInormationView
     }()
 
+    private let subInformationView: SubInformationView = {
+        let subInformationView = SubInformationView()
+        subInformationView.clipsToBounds = true
+        subInformationView.layer.cornerRadius = 10
+        return subInformationView
+    }()
+
     private let viewModel: DetailViewModelable
     private let coordinator: DetailCoordinator
     private let disposeBag = DisposeBag()
@@ -56,7 +63,7 @@ final class DetailViewController: UIViewController {
 
     private func setupView() {
         self.view.backgroundColor = ColorPalette.malrangPink
-        self.view.addSubview(self.mainInformationView)
+        self.view.addSubviews(self.mainInformationView, self.subInformationView)
     }
 
     private func setupConstraint() {
@@ -64,6 +71,12 @@ final class DetailViewController: UIViewController {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview().inset(10)
             $0.height.equalToSuperview().dividedBy(3)
+        }
+
+        self.subInformationView.snp.makeConstraints {
+            $0.top.equalTo(self.mainInformationView.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview().inset(10)
+            $0.height.equalToSuperview().dividedBy(8)
         }
     }
 
@@ -77,5 +90,6 @@ final class DetailViewController: UIViewController {
             .disposed(by: self.disposeBag)
 
         self.mainInformationView.bind(viewModel: self.viewModel)
+        self.subInformationView.bind(viewModel: self.viewModel)
     }
 }

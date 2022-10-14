@@ -10,7 +10,7 @@ import UIKit
 private enum Const {
     static let bookInformation = "책 정보"
     static let category = "카테고리"
-    static let totalPageNumber = "쪽수"
+    static let pageCount = "쪽수"
 }
 
 final class SubInformationView: UIView {
@@ -19,14 +19,6 @@ final class SubInformationView: UIView {
         label.font = .preferredFont(forTextStyle: .title2)
         label.text = Const.bookInformation
         return label
-    }()
-
-    private let categoryStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.alignment = .leading
-        stackView.spacing = 10
-        return stackView
     }()
 
     private let categoryLabel: UILabel = {
@@ -40,29 +32,20 @@ final class SubInformationView: UIView {
     private let categoryLabelInformation: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .body)
-        label.text = Const.category
         return label
     }()
 
-    private let totalPageNumberStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.alignment = .leading
-        stackView.spacing = 10
-        return stackView
-    }()
-
-    private let totalPageNumberLabel: UILabel = {
+    private let pageCountLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .body)
         label.textColor = .systemGray
-        label.text = Const.totalPageNumber
+        label.text = Const.pageCount
         return label
     }()
 
-    private let totalPageNumberInformationLabel: UILabel = {
+    private let pageCountInformationLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .body)
-        label.text = Const.totalPageNumber
         return label
     }()
 
@@ -80,18 +63,10 @@ final class SubInformationView: UIView {
         self.backgroundColor = .systemBackground
         self.addSubviews(
             self.bookInformationLabel,
-            self.categoryStackView,
-            self.totalPageNumberStackView
-        )
-
-        self.categoryStackView.addArrangedSubviews(
             self.categoryLabel,
-            self.categoryLabelInformation
-        )
-
-        self.totalPageNumberStackView.addArrangedSubviews(
-            self.totalPageNumberLabel,
-            self.totalPageNumberInformationLabel
+            self.categoryLabelInformation,
+            self.pageCountLabel,
+            self.pageCountInformationLabel
         )
     }
 
@@ -100,18 +75,29 @@ final class SubInformationView: UIView {
             $0.top.leading.equalToSuperview().inset(10)
         }
 
-        self.categoryStackView.snp.makeConstraints {
+        self.categoryLabel.snp.makeConstraints {
             $0.top.equalTo(self.bookInformationLabel.snp.bottom).offset(10)
             $0.leading.equalTo(self.bookInformationLabel.snp.leading)
         }
 
-        self.totalPageNumberStackView.snp.makeConstraints {
-            $0.top.equalTo(self.categoryStackView.snp.bottom).offset(10)
+        self.categoryLabelInformation.snp.makeConstraints {
+            $0.top.equalTo(self.categoryLabel.snp.top)
+            $0.leading.equalTo(self.categoryLabel.snp.trailing).offset(10)
+        }
+
+        self.pageCountLabel.snp.makeConstraints {
+            $0.top.equalTo(self.categoryLabel.snp.bottom).offset(10)
             $0.leading.equalTo(self.bookInformationLabel.snp.leading)
+        }
+
+        self.pageCountInformationLabel.snp.makeConstraints {
+            $0.top.equalTo(self.pageCountLabel.snp.top)
+            $0.leading.equalTo(self.categoryLabel.snp.trailing).offset(10)
         }
     }
 
     func bind(viewModel: DetailViewModelable) {
-
+        self.categoryLabelInformation.text = viewModel.categories
+        self.pageCountInformationLabel.text = viewModel.pageCountString
     }
 }
