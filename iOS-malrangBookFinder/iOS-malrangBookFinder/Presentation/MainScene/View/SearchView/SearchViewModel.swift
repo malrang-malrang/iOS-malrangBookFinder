@@ -19,6 +19,8 @@ protocol SearchViewModelOutput {
     var totalItems: Observable<Int> { get }
     var bookInformationList: Observable<[BookInformation]> { get }
     var error: Observable<Error> { get }
+    var startLoading: Observable<Void> { get }
+    var stopLoading: Observable<Void> { get }
 }
 
 private enum Const {
@@ -31,6 +33,8 @@ final class SearchViewModel: SearchViewModelable {
     private let bookInformationListRelay = BehaviorRelay<[BookInformation]>(value: [])
     private let totalItemsRelay = BehaviorRelay<Int>(value: 0)
     private let errorRelay = PublishRelay<Error>()
+    private let startLoadingRelay = PublishRelay<Void>()
+    private let stopLoadingRelay = PublishRelay<Void>()
     private var searchedText: String?
     private var startIndex = 0
     private var maxResult = 20
@@ -40,14 +44,14 @@ final class SearchViewModel: SearchViewModelable {
     }
 
     private func fetchBookList(text: String, startIndex: Int, maxResult: Int) {
-//                로딩 애니메이션 로직
+        self.startLoadingRelay.accept(())
         self.useCase.searchBookList(text: text, startIndex: startIndex, maxResult: maxResult)
             .subscribe(onNext: { [weak self] searchResult in
                 self?.checkResult(searchResult: searchResult)
             }, onError: { [weak self] error in
                 self?.errorRelay.accept(error)
             }, onCompleted: {
-                //로딩 제거 로직
+                self.stopLoadingRelay.accept(())
             })
             .disposed(by: self.disposeBag)
     }
@@ -65,6 +69,7 @@ final class SearchViewModel: SearchViewModelable {
         self.searchedText = nil
         self.totalItemsRelay.accept(0)
         self.bookInformationListRelay.accept([])
+        self.stopLoadingRelay.accept(())
     }
 
     // MARK: - Input
@@ -110,5 +115,13 @@ final class SearchViewModel: SearchViewModelable {
 
     var error: Observable<Error> {
         return self.errorRelay.asObservable()
+    }
+
+    var startLoading: Observable<Void> {
+        return self.startLoadingRelay.asObservable()
+    }
+
+    var stopLoading: Observable<Void> {
+        return self.stopLoadingRelay.asObservable()
     }
 }

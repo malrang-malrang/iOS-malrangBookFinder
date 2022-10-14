@@ -45,6 +45,7 @@ final class SearchView: UIView {
         return tableView
     }()
 
+    private let loadingIndicator = LoadingIndicatorView()
     private let coordinator: MainViewCoordinatorProtocol
     private let viewModel: SearchViewModelable
     private let disposeBag = DisposeBag()
@@ -67,7 +68,8 @@ final class SearchView: UIView {
         self.addSubviews(
             self.searchBar,
             self.resultCountView,
-            self.resultTableView
+            self.resultTableView,
+            self.loadingIndicator
         )
         self.resultCountView.addSubview(self.resultCountLabel)
     }
@@ -93,9 +95,16 @@ final class SearchView: UIView {
             $0.top.equalTo(self.resultCountView.snp.bottom).offset(1)
             $0.leading.trailing.bottom.equalToSuperview()
         }
+
+        self.loadingIndicator.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview().dividedBy(2)
+        }
     }
 
     private func bind() {
+        // MARK: - Error
+
         self.viewModel.error
             .observe(on: MainScheduler.instance)
             .bind { [weak self] error in
@@ -105,6 +114,8 @@ final class SearchView: UIView {
                 )
             }
             .disposed(by: self.disposeBag)
+
+        // MARK: - SearchBar
 
         self.searchBar.searchTextField.rx.controlEvent(.editingDidEndOnExit)
             .bind { self.endEditing(true) }
@@ -117,6 +128,8 @@ final class SearchView: UIView {
                 self?.viewModel.fetchFirstPage(text: text)
             }
             .disposed(by: self.disposeBag)
+
+        // MARK: - TableView
 
         self.viewModel.bookInformationList
             .observe(on: MainScheduler.instance)
@@ -142,9 +155,7 @@ final class SearchView: UIView {
             .disposed(by: self.disposeBag)
 
         self.resultTableView.rx.itemSelected
-            .bind { [weak self] indexPath in
-                self?.resultTableView.deselectRow(at: indexPath, animated: true)
-            }
+            .bind { self.resultTableView.deselectRow(at: $0, animated: true) }
             .disposed(by: self.disposeBag)
 
         self.resultTableView.rx.modelSelected(BookInformation.self)
@@ -157,6 +168,18 @@ final class SearchView: UIView {
             .bind { [weak self] indexPath in
                 self?.viewModel.fetchNextPage(lastRow: indexPath.last?.row)
             }
+            .disposed(by: self.disposeBag)
+
+        // MARK: - loadingIndicator
+
+        self.viewModel.startLoading
+            .observe(on: MainScheduler.instance)
+            .bind { self.loadingIndicator.startAnimating() }
+            .disposed(by: self.disposeBag)
+
+        self.viewModel.stopLoading
+            .observe(on: MainScheduler.instance)
+            .bind { self.loadingIndicator.stopAnimating() }
             .disposed(by: self.disposeBag)
     }
 }
