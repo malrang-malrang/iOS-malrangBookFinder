@@ -64,7 +64,7 @@ final class MainInformationVIew: UIView {
     }
 
     func bind(viewModel: DetailViewModelable) {
-        self.imageView.setImage(with: viewModel.imageUrlString, placeholder: SystemImage.malrang)
+        self.imageView.setImage(with: viewModel.imageUrlString, placeholder: CustomImage.malrang)
         self.titleLabel.text = viewModel.title
         self.authorsLabel.text = viewModel.authors
     }

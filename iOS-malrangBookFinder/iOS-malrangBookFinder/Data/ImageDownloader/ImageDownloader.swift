@@ -27,6 +27,7 @@ final class ImageDownloader {
         completion: @escaping (Result<UIImage, Error>) -> Void
     ) -> URLSessionDataTask? {
         guard let url = URL(string: urlString) else {
+            completion(.failure(ImageDownloadError.unknownError))
             return nil
         }
 

@@ -95,7 +95,10 @@ final class SearchResultCell: UITableViewCell {
     }
 
     func bind(viewModel: SearchResultCellViewModelable) {
-        self.thumbnailImageView.setImage(with: viewModel.imageUrlString)
+        self.thumbnailImageView.setImage(
+            with: viewModel.imageUrlString,
+            placeholder: CustomImage.malrang
+        )
         self.titleLabel.text = viewModel.title
         self.authorLabel.text = viewModel.authors
         self.publishedDateLabel.text = viewModel.publishedDate
