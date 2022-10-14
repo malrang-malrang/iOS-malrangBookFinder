@@ -12,6 +12,14 @@ private enum Const {
 }
 
 final class DescriptionInformationView: UIView {
+    private let contentsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 10
+        stackView.alignment = .leading
+        return stackView
+    }()
+
     private let bookDescriptionLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .title2)
@@ -39,17 +47,16 @@ final class DescriptionInformationView: UIView {
 
     private func setupView() {
         self.backgroundColor = .systemBackground
-        self.addSubviews(self.bookDescriptionLabel, self.descriptionInformationLabel)
+        self.addSubview(self.contentsStackView)
+        self.contentsStackView.addArrangedSubviews(
+            self.bookDescriptionLabel,
+            self.descriptionInformationLabel
+        )
     }
 
     private func setupConstraint() {
-        self.bookDescriptionLabel.snp.makeConstraints {
-            $0.top.leading.equalToSuperview().inset(10)
-        }
-
-        self.descriptionInformationLabel.snp.makeConstraints {
-            $0.top.equalTo(self.bookDescriptionLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(self.bookDescriptionLabel.snp.leading)
+        self.contentsStackView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(10)
         }
     }
 

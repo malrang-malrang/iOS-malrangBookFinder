@@ -35,6 +35,13 @@ final class DetailViewController: UIViewController {
         return subInformationView
     }()
 
+    private let descriptionView: DescriptionInformationView = {
+        let descriptionView = DescriptionInformationView()
+        descriptionView.clipsToBounds = true
+        descriptionView.layer.cornerRadius = 10
+        return descriptionView
+    }()
+
     private let viewModel: DetailViewModelable
     private let coordinator: DetailCoordinator
     private let disposeBag = DisposeBag()
@@ -63,7 +70,11 @@ final class DetailViewController: UIViewController {
 
     private func setupView() {
         self.view.backgroundColor = ColorPalette.malrangPink
-        self.view.addSubviews(self.mainInformationView, self.subInformationView)
+        self.view.addSubviews(
+            self.mainInformationView,
+            self.subInformationView,
+            self.descriptionView
+        )
     }
 
     private func setupConstraint() {
@@ -78,18 +89,23 @@ final class DetailViewController: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(10)
             $0.height.equalToSuperview().dividedBy(8)
         }
+
+        self.descriptionView.snp.makeConstraints {
+            $0.top.equalTo(self.subInformationView.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview().inset(10)
+        }
     }
 
     private func bind() {
         self.navigationItem.title = self.viewModel.title
+        self.mainInformationView.bind(viewModel: self.viewModel)
+        self.subInformationView.bind(viewModel: self.viewModel)
+        self.descriptionView.bind(viewModel: self.viewModel)
 
         self.backBarButton.rx.tap
             .bind { [weak self] _ in
                 self?.coordinator.popDetailView()
             }
             .disposed(by: self.disposeBag)
-
-        self.mainInformationView.bind(viewModel: self.viewModel)
-        self.subInformationView.bind(viewModel: self.viewModel)
     }
 }
