@@ -17,7 +17,7 @@ enum NetworkError: LocalizedError {
     case encodeError
     case responseError
 
-    var errorDescription: String {
+    var errorMessage: String {
         switch self {
         case .unknownError:
             return "알 수 없는 에러입니다."

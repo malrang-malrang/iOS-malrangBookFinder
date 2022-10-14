@@ -10,7 +10,7 @@ import Foundation
 enum InputError: LocalizedError {
     case searchResultIsEmptyError
 
-    var errorDescription: String? {
+    var errorMessage: String {
         switch self {
         case .searchResultIsEmptyError:
             return "검색 결과가 없습니다."
