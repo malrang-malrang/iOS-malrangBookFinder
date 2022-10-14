@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MainViewCoordinatorProtocol: Alertable {
-    func showDetailView()
+    func showDetailView(bookInformation: BookInformation)
 }
 
 final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
@@ -34,13 +34,13 @@ final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
         self.navigationController.pushViewController(mainView, animated: true)
     }
 
-    func showDetailView() {
+    func showDetailView(bookInformation: BookInformation) {
         let detailCoordinator = DetailCoordinator(
             navigationController: self.navigationController,
             parentCoordinators: self,
             bookSearchUseCase: self.bookSearchUseCase
         )
         self.childCoordinators.append(detailCoordinator)
-        detailCoordinator.start()
+        detailCoordinator.start(bookInformation: bookInformation)
     }
 }

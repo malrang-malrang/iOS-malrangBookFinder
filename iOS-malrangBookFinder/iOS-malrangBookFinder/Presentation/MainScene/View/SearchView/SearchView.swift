@@ -161,7 +161,7 @@ final class SearchView: UIView {
 
         self.resultTableView.rx.modelSelected(BookInformation.self)
             .bind { [weak self] bookInformation in
-                self?.coordinator.showDetailView()
+                self?.coordinator.showDetailView(bookInformation: bookInformation)
             }
             .disposed(by: self.disposeBag)
 

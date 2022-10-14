@@ -28,8 +28,9 @@ final class DetailCoordinator: Coordinator, DetailCoordinatorProtocol {
         self.bookSearchUseCase = bookSearchUseCase
     }
 
-    func start() {
-        let detailView = DetailViewController(coordinator: self)
+    func start(bookInformation: BookInformation) {
+        let detailViewModel = DetailViewModel(bookInformation: bookInformation)
+        let detailView = DetailViewController(viewModel: detailViewModel, coordinator: self)
         self.navigationController.pushViewController(detailView, animated: true)
     }
 
