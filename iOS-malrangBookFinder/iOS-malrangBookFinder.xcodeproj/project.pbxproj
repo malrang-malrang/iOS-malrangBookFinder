@@ -33,6 +33,7 @@
 		3096939A28F92CE9000B804A /* ArletBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3096939928F92CE9000B804A /* ArletBuilder.swift */; };
 		3096939D28F92FB5000B804A /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3096939C28F92FB5000B804A /* ColorPalette.swift */; };
 		3096939F28F9341F000B804A /* Error+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3096939E28F9341F000B804A /* Error+Sugar.swift */; };
+		309693A128F9478C000B804A /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309693A028F9478C000B804A /* LoadingIndicatorView.swift */; };
 		30C76AE528F6881A001C56DE /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE428F6881A001C56DE /* HttpMethod.swift */; };
 		30C76AE728F688C6001C56DE /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE628F688C6001C56DE /* NetworError.swift */; };
 		30C76AE928F689DB001C56DE /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C76AE828F689DB001C56DE /* Requestable.swift */; };
@@ -108,6 +109,7 @@
 		3096939928F92CE9000B804A /* ArletBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArletBuilder.swift; sourceTree = "<group>"; };
 		3096939C28F92FB5000B804A /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		3096939E28F9341F000B804A /* Error+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Sugar.swift"; sourceTree = "<group>"; };
+		309693A028F9478C000B804A /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		30C76AE428F6881A001C56DE /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		30C76AE628F688C6001C56DE /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
 		30C76AE828F689DB001C56DE /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
@@ -221,7 +223,7 @@
 			children = (
 				306D436128F8508900F45BCB /* Error */,
 				30C76B1428F6EA39001C56DE /* Coordinator */,
-				30C76B1728F6EBEC001C56DE /* Main */,
+				30C76B1728F6EBEC001C56DE /* MainScene */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -293,6 +295,7 @@
 			children = (
 				30C76B1928F6EEE8001C56DE /* SearchView.swift */,
 				306D434628F73A9900F45BCB /* SearchViewModel.swift */,
+				309693A028F9478C000B804A /* LoadingIndicatorView.swift */,
 				306D434B28F73E3400F45BCB /* Cell */,
 			);
 			path = SearchView;
@@ -350,10 +353,10 @@
 			isa = PBXGroup;
 			children = (
 				30C76AEC28F68AEC001C56DE /* Encodable+Sugar.swift */,
+				3096939E28F9341F000B804A /* Error+Sugar.swift */,
 				306D435D28F7FBA800F45BCB /* UIImageView+Sugar.swift */,
 				306D434328F738C500F45BCB /* UIView+Sugar.swift */,
 				306D435F28F8457200F45BCB /* UIStackView+Sugar.swift */,
-				3096939E28F9341F000B804A /* Error+Sugar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -438,12 +441,12 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		30C76B1728F6EBEC001C56DE /* Main */ = {
+		30C76B1728F6EBEC001C56DE /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
 				30C76B1828F6EBFD001C56DE /* View */,
 			);
-			path = Main;
+			path = MainScene;
 			sourceTree = "<group>";
 		};
 		30C76B1828F6EBFD001C56DE /* View */ = {
@@ -782,6 +785,7 @@
 				30C76AFD28F69DBD001C56DE /* GoogleBooksRepository.swift in Sources */,
 				30C76AF228F69780001C56DE /* Endpoint.swift in Sources */,
 				3063A11828F6861E002624EC /* ImageLinksDTO.swift in Sources */,
+				309693A128F9478C000B804A /* LoadingIndicatorView.swift in Sources */,
 				30D057A628F6720A00AC931D /* SceneDelegate.swift in Sources */,
 				3096939D28F92FB5000B804A /* ColorPalette.swift in Sources */,
 				3063A11428F685FE002624EC /* DimensionsDTO.swift in Sources */,
