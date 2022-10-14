@@ -17,7 +17,7 @@ protocol SearchResultCellViewModelOutput {
 }
 
 private enum Const {
-    static let unknown = "알 수 없음"
+    static let unknown = "정보 없음"
     static let emptyString = ""
     static let authorsInformation = "%@ 외 %d명"
 }

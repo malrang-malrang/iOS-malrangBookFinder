@@ -21,7 +21,7 @@ protocol DetailViewModelOutput {
 }
 
 private enum Const {
-    static let unknown = "알 수 없음"
+    static let unknown = "정보 없음"
     static let emptyString = ""
     static let commaString = ", "
     static let pageCountString = "%d 쪽"
