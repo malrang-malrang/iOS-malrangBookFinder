@@ -16,8 +16,11 @@ private enum Const {
 final class MainViewController: UIViewController {
     private let navigationTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 30, weight: .semibold)
-        label.text = Const.navigationTitlt
+        let largeTitleFont = UIFont.preferredFont(forTextStyle: .largeTitle)
+        label.attributedText = NSAttributedString(
+            string: Const.navigationTitlt,
+            attributes: [.foregroundColor: ColorPalette.malrangPink, .font: largeTitleFont]
+        )
         return label
     }()
 
