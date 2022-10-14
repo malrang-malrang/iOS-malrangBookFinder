@@ -19,8 +19,7 @@ protocol SearchViewModelOutput {
     var totalItems: Observable<Int> { get }
     var bookInformationList: Observable<[BookInformation]> { get }
     var error: Observable<Error> { get }
-    var startLoading: Observable<Void> { get }
-    var stopLoading: Observable<Void> { get }
+    var isLoading: Observable<Bool> { get }
 }
 
 private enum Const {
@@ -33,8 +32,7 @@ final class SearchViewModel: SearchViewModelable {
     private let bookInformationListRelay = BehaviorRelay<[BookInformation]>(value: [])
     private let totalItemsRelay = BehaviorRelay<Int>(value: 0)
     private let errorRelay = PublishRelay<Error>()
-    private let startLoadingRelay = PublishRelay<Void>()
-    private let stopLoadingRelay = PublishRelay<Void>()
+    private let isLoadingRelay = PublishRelay<Bool>()
     private var searchedText: String?
     private var startIndex = 0
     private var maxResult = 20
@@ -44,14 +42,14 @@ final class SearchViewModel: SearchViewModelable {
     }
 
     private func fetchBookList(text: String, startIndex: Int, maxResult: Int) {
-        self.startLoadingRelay.accept(())
+        self.isLoadingRelay.accept(true)
         self.useCase.searchBookList(text: text, startIndex: startIndex, maxResult: maxResult)
             .subscribe(onNext: { [weak self] searchResult in
                 self?.checkResult(searchResult: searchResult)
             }, onError: { [weak self] error in
                 self?.errorRelay.accept(error)
             }, onCompleted: {
-                self.stopLoadingRelay.accept(())
+                self.isLoadingRelay.accept(false)
             })
             .disposed(by: self.disposeBag)
     }
@@ -69,7 +67,7 @@ final class SearchViewModel: SearchViewModelable {
         self.searchedText = nil
         self.totalItemsRelay.accept(0)
         self.bookInformationListRelay.accept([])
-        self.stopLoadingRelay.accept(())
+        self.isLoadingRelay.accept(false)
     }
 
     // MARK: - Input
@@ -117,11 +115,7 @@ final class SearchViewModel: SearchViewModelable {
         return self.errorRelay.asObservable()
     }
 
-    var startLoading: Observable<Void> {
-        return self.startLoadingRelay.asObservable()
-    }
-
-    var stopLoading: Observable<Void> {
-        return self.stopLoadingRelay.asObservable()
+    var isLoading: Observable<Bool> {
+        return self.isLoadingRelay.asObservable()
     }
 }

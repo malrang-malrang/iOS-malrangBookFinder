@@ -119,7 +119,8 @@ final class SearchView: UIView {
         // MARK: - SearchBar
 
         self.searchBar.searchTextField.rx.controlEvent(.editingDidEndOnExit)
-            .bind { self.endEditing(true) }
+            .bind { [weak self] _ in
+                self?.endEditing(true) }
             .disposed(by: disposeBag)
 
         self.searchBar.rx.text.orEmpty
@@ -155,15 +156,15 @@ final class SearchView: UIView {
             .bind(to: self.resultCountLabel.rx.text)
             .disposed(by: self.disposeBag)
 
-        self.resultTableView.rx.itemSelected
-            .bind { self.resultTableView.deselectRow(at: $0, animated: true) }
-            .disposed(by: self.disposeBag)
-
-        self.resultTableView.rx.modelSelected(BookInformation.self)
-            .bind { [weak self] bookInformation in
-                self?.coordinator.showDetailView(bookInformation: bookInformation)
-            }
-            .disposed(by: self.disposeBag)
+        Observable.zip(
+            self.resultTableView.rx.itemSelected,
+            self.resultTableView.rx.modelSelected(BookInformation.self)
+        )
+        .bind { [weak self] (indexPath, bookInformation) in
+            self?.coordinator.showDetailView(bookInformation: bookInformation)
+            self?.resultTableView.deselectRow(at: indexPath, animated: true)
+        }
+        .disposed(by: self.disposeBag)
 
         self.resultTableView.rx.prefetchRows
             .bind { [weak self] indexPath in
@@ -173,14 +174,16 @@ final class SearchView: UIView {
 
         // MARK: - loadingIndicator
 
-        self.viewModel.startLoading
+        self.viewModel.isLoading
             .observe(on: MainScheduler.instance)
-            .bind { self.loadingIndicator.startAnimating() }
-            .disposed(by: self.disposeBag)
-
-        self.viewModel.stopLoading
-            .observe(on: MainScheduler.instance)
-            .bind { self.loadingIndicator.stopAnimating() }
+            .bind { [weak self] isLoading in
+                switch isLoading {
+                case true:
+                    self?.loadingIndicator.startAnimating()
+                case false:
+                    self?.loadingIndicator.stopAnimating()
+                }
+            }
             .disposed(by: self.disposeBag)
     }
 }
