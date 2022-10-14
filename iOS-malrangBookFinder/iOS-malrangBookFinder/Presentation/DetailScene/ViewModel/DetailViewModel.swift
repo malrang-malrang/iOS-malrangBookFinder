@@ -13,12 +13,15 @@ protocol DetailViewModelOutput {
     var imageUrlString: String { get }
     var title: String { get }
     var authors: String { get }
+    var categories: String { get }
+    var pageCountString: String { get }
 }
 
 private enum Const {
     static let unknown = "알 수 없음"
     static let emptyString = ""
     static let commaString = ", "
+    static let pageCountString = "%d 쪽"
 }
 
 final class DetailViewModel: DetailViewModelable {
@@ -48,5 +51,25 @@ final class DetailViewModel: DetailViewModelable {
         }
 
         return authors.first ?? Const.unknown
+    }
+
+    var categories: String {
+        guard let categories = self.bookInformation.volumeInfo?.categories else {
+            return Const.unknown
+        }
+
+        if categories.count > 1 {
+            return categories.joined(separator: Const.commaString)
+        }
+
+        return categories.first ?? Const.unknown
+    }
+
+    var pageCountString: String {
+        guard let pageCount = self.bookInformation.volumeInfo?.pageCount else {
+            return Const.unknown
+        }
+
+        return String(format: Const.pageCountString, pageCount)
     }
 }
