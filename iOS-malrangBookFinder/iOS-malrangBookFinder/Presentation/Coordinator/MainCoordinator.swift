@@ -35,7 +35,7 @@ final class MainViewCoordinator: Coordinator, MainViewCoordinatorProtocol {
     }
 
     func showDetailView() {
-        let detailCoordinator = MainViewCoordinator(
+        let detailCoordinator = DetailCoordinator(
             navigationController: self.navigationController,
             parentCoordinators: self,
             bookSearchUseCase: self.bookSearchUseCase

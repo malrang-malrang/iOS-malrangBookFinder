@@ -28,7 +28,10 @@ final class DetailCoordinator: Coordinator, DetailCoordinatorProtocol {
         self.bookSearchUseCase = bookSearchUseCase
     }
 
-    func start() {}
+    func start() {
+        let detailView = DetailViewController(coordinator: self)
+        self.navigationController.pushViewController(detailView, animated: true)
+    }
 
     func popDetailView() {
         self.navigationController.popViewController(animated: true)
