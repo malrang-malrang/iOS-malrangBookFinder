@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 private enum Const {
     static let bookInformation = "책 정보"
     static let category = "카테고리"
@@ -14,13 +16,6 @@ private enum Const {
 }
 
 final class SubInformationView: UIView {
-    private let contentsStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 10
-        return stackView
-    }()
-
     private let bookInformationLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .title2)

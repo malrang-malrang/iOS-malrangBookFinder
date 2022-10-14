@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 private enum Const {
     static let bookDiscription = "책 소개"
 }

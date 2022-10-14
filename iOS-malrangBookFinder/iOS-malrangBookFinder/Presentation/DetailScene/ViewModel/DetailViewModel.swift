@@ -16,6 +16,8 @@ protocol DetailViewModelOutput {
     var categories: String { get }
     var pageCountString: String { get }
     var description: String { get }
+    var publisher: String { get }
+    var publishedDateString: String { get }
 }
 
 private enum Const {
@@ -76,5 +78,13 @@ final class DetailViewModel: DetailViewModelable {
 
     var description: String {
         return self.bookInformation.volumeInfo?.description ?? Const.unknown
+    }
+
+    var publisher: String {
+        return self.bookInformation.volumeInfo?.publisher ?? Const.unknown
+    }
+
+    var publishedDateString: String {
+        return self.bookInformation.volumeInfo?.publishedDate ?? Const.unknown
     }
 }

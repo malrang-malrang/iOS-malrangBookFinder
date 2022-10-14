@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 final class MainInformationVIew: UIView {
     private let contentsStackView: UIStackView = {
         let stackView = UIStackView()
