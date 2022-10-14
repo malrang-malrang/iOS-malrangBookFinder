@@ -19,7 +19,10 @@ private enum Const {
 extension Alertable {
     func showErrorAlert(title: String, message: String) {
         let checkAction = UIAlertAction(title: Const.checkString, style: .cancel)
-        checkAction.setValue(ColorPalette.malrangPink, forKey: Const.titleTextColorString)
+        checkAction.setValue(
+            ColorPalette.malrangDeepPink,
+            forKey: Const.titleTextColorString
+        )
 
         let alert = AlertBuilder.shared
             .setType(.alert)
