@@ -9,10 +9,5 @@ import Foundation
 
 struct IndustryIdentifiersDTO: Decodable {
     let type: String?
-    let isbn: String?
-
-    private enum CodingKeys: String, CodingKey {
-        case type
-        case isbn = "identifier"
-    }
+    let identifier: String?
 }
