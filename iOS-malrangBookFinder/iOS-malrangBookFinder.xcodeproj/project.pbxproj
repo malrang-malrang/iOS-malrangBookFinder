@@ -228,12 +228,13 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		3063A10328F6794A002624EC /* Resource */ = {
+		3063A10328F6794A002624EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				30D057AC28F6720B00AC931D /* Assets.xcassets */,
+				30D057AE28F6720B00AC931D /* LaunchScreen.storyboard */,
 			);
-			path = Resource;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		3063A10428F6795A002624EC /* Presentation */ = {
@@ -245,14 +246,6 @@
 				309693A628F954E8000B804A /* DetailScene */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		3063A10528F6796B002624EC /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				30D057AE28F6720B00AC931D /* LaunchScreen.storyboard */,
-			);
-			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		3063A10628F67DF9002624EC /* Data */ = {
@@ -397,6 +390,17 @@
 				309693B228F97167000B804A /* ContentsView */,
 			);
 			path = DetailScrollView;
+			sourceTree = "<group>";
+		};
+		309693BD28FADFE1000B804A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				30C76AF528F698AF001C56DE /* Domain */,
+				3063A10428F6795A002624EC /* Presentation */,
+				3063A10628F67DF9002624EC /* Data */,
+				30C76AEA28F68A83001C56DE /* Utils */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		30C76AE328F687E5001C56DE /* NetworkManager */ = {
@@ -560,12 +564,8 @@
 			children = (
 				30D057B128F6720B00AC931D /* Info.plist */,
 				3063A10228F67939002624EC /* Application */,
-				3063A10528F6796B002624EC /* SupportingFiles */,
-				3063A10328F6794A002624EC /* Resource */,
-				30C76AF528F698AF001C56DE /* Domain */,
-				3063A10428F6795A002624EC /* Presentation */,
-				3063A10628F67DF9002624EC /* Data */,
-				30C76AEA28F68A83001C56DE /* Utils */,
+				3063A10328F6794A002624EC /* Resources */,
+				309693BD28FADFE1000B804A /* Sources */,
 			);
 			path = "iOS-malrangBookFinder";
 			sourceTree = "<group>";
