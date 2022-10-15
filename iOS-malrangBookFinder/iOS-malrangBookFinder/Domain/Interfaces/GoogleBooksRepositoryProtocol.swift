@@ -9,7 +9,7 @@ import RxSwift
 
 protocol GoogleBooksRepositoryProtocol {
     func searchBookList(
-        title: String,
+        text: String,
         startIndex: Int,
         maxResult: Int
     ) -> Observable<SearchResult>

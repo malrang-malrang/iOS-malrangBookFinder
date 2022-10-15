@@ -15,12 +15,12 @@ final class GoogleBooksRepository: GoogleBooksRepositoryProtocol {
     }
 
     func searchBookList(
-        title: String,
+        text: String,
         startIndex: Int,
         maxResult: Int
     ) -> Observable<SearchResult> {
         let endpoint = EndPointStrage.searchBookList(
-            title: title,
+            title: text,
             startIndex: startIndex,
             maxResult: maxResult
         ).endpoint

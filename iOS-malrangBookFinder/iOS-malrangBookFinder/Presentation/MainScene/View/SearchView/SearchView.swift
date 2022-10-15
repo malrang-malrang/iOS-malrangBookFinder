@@ -120,11 +120,12 @@ final class SearchView: UIView {
 
         self.searchBar.searchTextField.rx.controlEvent(.editingDidEndOnExit)
             .bind { [weak self] _ in
-                self?.endEditing(true) }
+                self?.endEditing(true)
+            }
             .disposed(by: disposeBag)
 
-        self.searchBar.rx.text.orEmpty
-            .debounce(RxTimeInterval.milliseconds(5), scheduler: MainScheduler.instance)
+        self.searchBar.rx.text
+            .orEmpty
             .distinctUntilChanged()
             .bind { [weak self] text in
                 self?.viewModel.fetchFirstPage(text: text)

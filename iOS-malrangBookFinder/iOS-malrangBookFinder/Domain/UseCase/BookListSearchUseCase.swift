@@ -28,7 +28,7 @@ final class BookListSearchUseCase: BookListSearchUseCaseProtocol {
         maxResult: Int
     ) -> Observable<SearchResult> {
         return self.googleBooksRepository.searchBookList(
-            title: text,
+            text: text,
             startIndex: startIndex,
             maxResult: maxResult
         )
