@@ -9,7 +9,7 @@ import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    private var coordinator: Coordinator?
+    private var coordinator: AppCoordinator?
 
     func scene(
         _ scene: UIScene,
@@ -22,6 +22,11 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.makeKeyAndVisible()
 
         let navigationController = UINavigationController()
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.setBackgroundImage(
+            UIImage(),
+            for: UIBarMetrics.default
+        )
         self.window?.rootViewController = navigationController
         self.coordinator = AppCoordinator(navigationController: navigationController)
         self.coordinator?.start()

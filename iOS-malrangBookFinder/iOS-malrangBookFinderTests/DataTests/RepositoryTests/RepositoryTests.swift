@@ -35,7 +35,7 @@ final class RepositoryTests: XCTestCase {
         self.mockDataManager.makeRequestSuccessResult()
 
         // when
-        self.sut.searchBookList(title: "test")
+        self.sut.searchBookList(text: "test", startIndex: 0, maxResult: 20)
             .subscribe(onNext: { searchResult in
                 //then
                 let result = searchResult.totalItems
@@ -55,7 +55,7 @@ final class RepositoryTests: XCTestCase {
         self.mockDataManager.makeRequestFailureResult()
 
         // when
-        self.sut.searchBookList(title: "test")
+        self.sut.searchBookList(text: "test", startIndex: 0, maxResult: 20)
             .subscribe(onNext: { _ in
                 XCTFail()
             }, onError: { _ in
