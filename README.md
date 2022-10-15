@@ -14,13 +14,13 @@
 ## 🔎 프로젝트 소개
 [Google Books API](https://developers.google.com/books/docs/overview)를 이용한 도서 검색 어플입니다.
 
-<img src="https://i.imgur.com/saioHUl.png" width="900">
+<img src="https://i.imgur.com/saioHUl.png" width="850">
 
 ---
 ## 📺 프로젝트 실행화면
 |MainScene|Search&Result|Pagenation|DetailScene|
 |--|--|--|--|
-|<img src="https://i.imgur.com/HSYPk1n.gif" width="200">|<img src="https://i.imgur.com/eF6ii2U.gif" width="200">|<img src="https://i.imgur.com/DYrTVfQ.gif" width="200">|<img src="https://i.imgur.com/WBFx3Z9.gif" width="200">|
+|<img src="https://i.imgur.com/HSYPk1n.gif" width="180">|<img src="https://i.imgur.com/eF6ii2U.gif" width="180">|<img src="https://i.imgur.com/DYrTVfQ.gif" width="180">|<img src="https://i.imgur.com/WBFx3Z9.gif" width="180">|
 
 ---
 ## 🛠 개발환경 및 라이브러리
