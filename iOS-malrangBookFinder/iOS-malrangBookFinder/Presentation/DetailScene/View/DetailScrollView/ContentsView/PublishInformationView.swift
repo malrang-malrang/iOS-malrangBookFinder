@@ -98,8 +98,8 @@ final class PublishInformationView: UIView {
         }
     }
 
-    func bind(viewModel: DetailViewModelable) {
-        self.publisherInformationLabel.text = viewModel.publisher
-        self.publishedDateInformation.text = viewModel.publishedDateString
+    func bind(publisher: String, publishedDate: String) {
+        self.publisherInformationLabel.text = publisher
+        self.publishedDateInformation.text = publishedDate
     }
 }

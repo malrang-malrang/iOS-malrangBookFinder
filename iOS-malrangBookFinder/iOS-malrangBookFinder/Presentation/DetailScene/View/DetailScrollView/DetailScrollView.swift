@@ -86,9 +86,24 @@ final class DetailScrollView: UIScrollView {
     }
 
     private func bind() {
-        self.mainInformationView.bind(viewModel: self.viewModel)
-        self.subInformationView.bind(viewModel: self.viewModel)
-        self.descriptionInformationView.bind(viewModel: self.viewModel)
-        self.publishInformationView.bind(viewModel: self.viewModel)
+        self.mainInformationView.bind(
+            imageUrlString: self.viewModel.imageUrlString,
+            title: self.viewModel.title,
+            authors: self.viewModel.authors
+        )
+        
+        self.subInformationView.bind(
+            categories: self.viewModel.categories,
+            pageCount: self.viewModel.pageCountString
+        )
+
+        self.descriptionInformationView.bind(
+            description: self.viewModel.description
+        )
+
+        self.publishInformationView.bind(
+            publisher: self.viewModel.publisher,
+            publishedDate: self.viewModel.publishedDateString
+        )
     }
 }

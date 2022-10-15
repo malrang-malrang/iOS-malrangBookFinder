@@ -98,8 +98,8 @@ final class SubInformationView: UIView {
         }
     }
 
-    func bind(viewModel: DetailViewModelable) {
-        self.categoryLabelInformation.text = viewModel.categories
-        self.pageCountInformationLabel.text = viewModel.pageCountString
+    func bind(categories: String, pageCount: String) {
+        self.categoryLabelInformation.text = categories
+        self.pageCountInformationLabel.text = pageCount
     }
 }

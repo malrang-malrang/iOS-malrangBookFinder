@@ -62,7 +62,7 @@ final class DescriptionInformationView: UIView {
         }
     }
 
-    func bind(viewModel: DetailViewModelable) {
-        self.descriptionInformationLabel.text = viewModel.description
+    func bind(description: String) {
+        self.descriptionInformationLabel.text = description
     }
 }
