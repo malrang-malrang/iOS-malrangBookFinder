@@ -58,6 +58,8 @@ final class SearchResultCell: UITableViewCell {
         return label
     }()
 
+    private var imageTask: URLSessionDataTask?
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.setupContentView()
@@ -95,8 +97,8 @@ final class SearchResultCell: UITableViewCell {
     }
 
     func bind(viewModel: SearchResultCellViewModelable) {
-        self.thumbnailImageView.setImage(
-            with: viewModel.imageUrlString,
+        self.imageTask = self.thumbnailImageView.setImage(
+            urlString: viewModel.imageUrlString,
             placeholder: CustomImage.malrang
         )
         self.titleLabel.text = viewModel.title
@@ -106,6 +108,9 @@ final class SearchResultCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        self.imageTask?.suspend()
+        self.imageTask?.cancel()
+
         self.thumbnailImageView.image = nil
         self.titleLabel.text = nil
         self.authorLabel.text = nil

@@ -127,6 +127,7 @@ final class SearchView: UIView {
         self.searchBar.rx.text
             .orEmpty
             .distinctUntilChanged()
+            .debounce(RxTimeInterval.milliseconds(5), scheduler: MainScheduler.instance)
             .bind { [weak self] text in
                 self?.viewModel.fetchFirstPage(text: text)
             }

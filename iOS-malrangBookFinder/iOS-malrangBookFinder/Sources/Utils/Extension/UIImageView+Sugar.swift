@@ -8,36 +8,33 @@
 import UIKit
 
 extension UIImageView {
-    private var imageDownloadTask: URLSessionDataTask? {
-        get { objc_getAssociatedObject(self, "image") as? URLSessionDataTask }
-        set { objc_setAssociatedObject(self, "image", newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
-    }
 
-    func setImage(with urlstring: String, placeholder: UIImage? = nil) {
-        self.imageDownloadTask?.suspend()
-        self.imageDownloadTask?.cancel()
+    @discardableResult
+    func setImage(urlString: String, placeholder: UIImage? = nil) -> URLSessionDataTask? {
+        let cacheManager = ImageCacheManager.shared
 
-        let cache = ImageCacheManager.shared.cache
-
-        if let cacheImage = cache.object(forKey: urlstring as NSString) {
-            return self.image = cacheImage
+        if let cacheImage = cacheManager.getImage(key: urlString) {
+            self.loadOnMainScheduler(image: cacheImage)
+            return nil
         }
 
-        self.imageDownloadTask = ImageDownloader.share.download(with: urlstring) { result in
+        let task = ImageDownloader.shared.downloadImage(with: urlString) { result in
             switch result {
             case .success(let image):
-                cache.setObject(image, forKey: urlstring as NSString)
-                DispatchQueue.main.async {
-                    self.image = image
-                }
-                return
+                cacheManager.saveImage(key: urlString, image: image)
+                return self.loadOnMainScheduler(image: image)
             case .failure:
                 guard let placeholder = placeholder else { return }
-                DispatchQueue.main.async {
-                    self.image = placeholder
-                }
-                return
+                return self.loadOnMainScheduler(image: placeholder)
             }
+        }
+
+        return task
+    }
+
+    private func loadOnMainScheduler(image: UIImage) {
+        DispatchQueue.main.async { [weak self] in
+            self?.image = image
         }
     }
 }

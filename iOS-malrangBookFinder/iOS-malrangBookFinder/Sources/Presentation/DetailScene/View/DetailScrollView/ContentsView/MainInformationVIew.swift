@@ -67,7 +67,7 @@ final class MainInformationVIew: UIView {
     }
 
     func bind(imageUrlString:String, title: String, authors: String) {
-        self.imageView.setImage(with: imageUrlString, placeholder: CustomImage.malrang)
+        self.imageView.setImage(urlString: imageUrlString, placeholder: CustomImage.malrang)
         self.titleLabel.text = title
         self.authorsLabel.text = authors
     }

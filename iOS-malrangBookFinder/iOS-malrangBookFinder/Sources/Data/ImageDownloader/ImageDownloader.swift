@@ -8,26 +8,19 @@
 import UIKit
 
 final class ImageDownloader {
-    static let share = ImageDownloader()
-
-    private var sessionConfiguration = URLSessionConfiguration.ephemeral
+    static let shared = ImageDownloader()
     private let session: URLSession
 
-    init() {
-        self.session = URLSession(
-            configuration: self.sessionConfiguration,
-            delegate: nil,
-            delegateQueue: nil
-        )
+    init(session: URLSession = URLSession.shared) {
+        self.session = session
     }
 
-    @discardableResult
-    func download(
+    func downloadImage(
         with urlString: String,
         completion: @escaping (Result<UIImage, Error>) -> Void
     ) -> URLSessionDataTask? {
         guard let url = URL(string: urlString) else {
-            completion(.failure(ImageDownloadError.unknownError))
+            completion(.failure(ImageDownloadError.urlError))
             return nil
         }
 
@@ -59,3 +52,4 @@ final class ImageDownloader {
         return task
     }
 }
+

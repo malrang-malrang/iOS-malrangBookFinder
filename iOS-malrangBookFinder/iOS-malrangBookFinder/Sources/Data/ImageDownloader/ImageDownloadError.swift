@@ -13,6 +13,7 @@ enum ImageDownloadError: LocalizedError {
     case emptyDataError
     case responseError
     case imageConvertError
+    case urlError
 
     var errorMessage: String {
         switch self {
@@ -26,6 +27,8 @@ enum ImageDownloadError: LocalizedError {
             return "response 수신을 실패 했습니다."
         case .imageConvertError:
             return "이미지 변환에 실패 했습니다."
+        case .urlError:
+            return "URL이 잘못되었습니다."
         }
     }
 }
