@@ -1,24 +1,29 @@
 //
-//  UIImageView+Sugar.swift
+//  DownloadableImageView.swift
 //  iOS-malrangBookFinder
 //
-//  Created by 김동욱 on 2022/10/13.
+//  Created by 김동욱 on 2022/11/12.
 //
 
 import UIKit
 
-extension UIImageView {
+final class DownloadableImageView: UIImageView {
+    var task: URLSessionDataTask?
 
-    @discardableResult
-    func setImage(urlString: String, placeholder: UIImage? = nil) -> URLSessionDataTask? {
-        let cacheManager = ImageCacheManager.shared
+    func cancelTask() {
+        self.task?.suspend()
+        self.task?.cancel()
+    }
+
+    func setImage(urlString: String, placeholder: UIImage? = nil) {
+        let cacheManager = CacheManager.shared
 
         if let cacheImage = cacheManager.getImage(key: urlString) {
             self.loadOnMainScheduler(image: cacheImage)
-            return nil
+            return
         }
 
-        let task = ImageDownloader.shared.downloadImage(with: urlString) { result in
+        self.task = ImageDownloader.shared.downloadImage(with: urlString) { result in
             switch result {
             case .success(let image):
                 cacheManager.saveImage(key: urlString, image: image)
@@ -28,8 +33,6 @@ extension UIImageView {
                 return self.loadOnMainScheduler(image: placeholder)
             }
         }
-
-        return task
     }
 
     private func loadOnMainScheduler(image: UIImage) {
@@ -38,3 +41,4 @@ extension UIImageView {
         }
     }
 }
+

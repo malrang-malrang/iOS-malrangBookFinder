@@ -53,3 +53,31 @@ final class ImageDownloader {
     }
 }
 
+//final class ImageManager {
+//    private var task: URLSessionDataTask?
+//    private let downloader = ImageDownloader.shared
+//    private let imageCache: NSCache<NSString, UIImage> = {
+//        let cache = NSCache<NSString, UIImage>()
+//        cache.countLimit = 100
+//        return cache
+//    }()
+//
+//    func taskCancel() {
+//        self.task?.suspend()
+//        self.task?.cancel()
+//    }
+//
+//    func downloadImage(
+//        with: String,
+//        complition: @escaping (Result<UIImage, Error>) -> ()
+//    ) {
+//        self.task = self.downloader.downloadImage(with: with, completion: { result in
+//            switch result {
+//            case .success(let image):
+//                <#code#>
+//            case .failure:
+//                <#code#>
+//            }
+//        })
+//    }
+//}

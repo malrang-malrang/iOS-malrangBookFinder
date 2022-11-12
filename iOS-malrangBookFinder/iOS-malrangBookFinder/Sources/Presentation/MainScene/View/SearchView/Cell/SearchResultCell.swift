@@ -22,8 +22,8 @@ final class SearchResultCell: UITableViewCell {
         return stackView
     }()
 
-    private let thumbnailImageView: UIImageView = {
-        let imageView = UIImageView()
+    private let thumbnailImageView: DownloadableImageView = {
+        let imageView = DownloadableImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 5
@@ -57,8 +57,6 @@ final class SearchResultCell: UITableViewCell {
         label.textColor = .systemGray
         return label
     }()
-
-    private var imageTask: URLSessionDataTask?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -97,7 +95,11 @@ final class SearchResultCell: UITableViewCell {
     }
 
     func bind(viewModel: SearchResultCellViewModelable) {
-        self.imageTask = self.thumbnailImageView.setImage(
+//        self.thumbnailImageView.setImage(
+//            urlString: viewModel.imageUrlString,
+//            placeholder: CustomImage.malrang
+//        )
+        self.thumbnailImageView.setImage(
             urlString: viewModel.imageUrlString,
             placeholder: CustomImage.malrang
         )
@@ -108,9 +110,7 @@ final class SearchResultCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.imageTask?.suspend()
-        self.imageTask?.cancel()
-
+        self.thumbnailImageView.cancelTask()
         self.thumbnailImageView.image = nil
         self.titleLabel.text = nil
         self.authorLabel.text = nil

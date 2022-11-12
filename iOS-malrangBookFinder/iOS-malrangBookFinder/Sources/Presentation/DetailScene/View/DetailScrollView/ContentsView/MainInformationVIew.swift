@@ -19,8 +19,8 @@ final class MainInformationVIew: UIView {
         return stackView
     }()
 
-    private let imageView: UIImageView = {
-        let imageView = UIImageView()
+    private let imageView: DownloadableImageView = {
+        let imageView = DownloadableImageView()
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
