@@ -1,5 +1,5 @@
 //
-//  EndpointStrage.swift
+//  EndpointStorage.swift
 //  iOS-malrangBookFinder
 //
 //  Created by 김동욱 on 2022/10/12.
@@ -12,11 +12,11 @@ private enum Const {
     static let basePath = "/books/v1/volumes/"
 }
 
-enum EndPointStrage {
+enum EndpointStorage {
     case searchBookList(title: String, startIndex: Int, maxResult: Int)
 }
 
-extension EndPointStrage {
+extension EndpointStorage {
     var endpoint: Endpoint {
         switch self {
         case .searchBookList(
@@ -33,7 +33,7 @@ extension EndPointStrage {
     }
 }
 
-extension EndPointStrage {
+extension EndpointStorage {
     private func searchBookList(
         text: String,
         startIndex: Int,

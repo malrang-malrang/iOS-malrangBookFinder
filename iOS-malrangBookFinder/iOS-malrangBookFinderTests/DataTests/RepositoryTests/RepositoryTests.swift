@@ -32,7 +32,7 @@ final class RepositoryTests: XCTestCase {
     func test_searchBookList호출시_성공한_경우_SearchResultDTO의_totalItems가_1355인지() {
         // given
         let promise = expectation(description: "totalItems가 1355인지")
-        self.mockDataManager.makeRequestSuccessResult()
+        self.mockDataManager.makeSuccessDataResult()
 
         // when
         self.sut.searchBookList(text: "test", startIndex: 0, maxResult: 20)
@@ -52,7 +52,7 @@ final class RepositoryTests: XCTestCase {
     func test_searchBookList호출시_실패한_경우_에러를_전달하는지() {
         // given
         let promise = expectation(description: "에러가 전달되는지")
-        self.mockDataManager.makeRequestFailureResult()
+        self.mockDataManager.makeFailureResult()
 
         // when
         self.sut.searchBookList(text: "test", startIndex: 0, maxResult: 20)

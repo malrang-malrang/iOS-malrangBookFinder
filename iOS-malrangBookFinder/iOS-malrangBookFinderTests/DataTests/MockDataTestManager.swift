@@ -15,7 +15,7 @@ struct MockDataTestManager {
         return URLSession(configuration: configuration)
     }
 
-    func makeRequestSuccessResult() {
+    func makeSuccessDataResult() {
         MockURLProtocol.requestHandler = { _ in
             let url = URL(string: "test")!
             let httpResponse = HTTPURLResponse(
@@ -30,7 +30,7 @@ struct MockDataTestManager {
         }
     }
 
-    func makeRequestFailureResult() {
+    func makeFailureResult() {
         MockURLProtocol.requestHandler = { _ in
             let url = URL(string: "test")!
             let httpResponse = HTTPURLResponse(
@@ -42,6 +42,21 @@ struct MockDataTestManager {
             let data = Data()
 
             return (httpResponse, data)
+        }
+    }
+
+    func makeSuccessImageResult() {
+        MockURLProtocol.requestHandler = { _ in
+            let url = URL(string: "test")!
+            let httpResponse = HTTPURLResponse(
+                url: url,
+                statusCode: 200,
+                httpVersion: "2",
+                headerFields: nil
+            )!
+            let imageData = UIImage(named: "MalrangImage")!.pngData()!
+
+            return (httpResponse, imageData)
         }
     }
 }

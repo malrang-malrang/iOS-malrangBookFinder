@@ -8,7 +8,7 @@
 import UIKit
 
 final class DownloadableImageView: UIImageView {
-    var task: URLSessionDataTask?
+    private var task: URLSessionDataTask?
 
     func cancelTask() {
         self.task?.suspend()
@@ -16,21 +16,14 @@ final class DownloadableImageView: UIImageView {
     }
 
     func setImage(urlString: String, placeholder: UIImage? = nil) {
-        let cacheManager = CacheManager.shared
-
-        if let cacheImage = cacheManager.getImage(key: urlString) {
-            self.loadOnMainScheduler(image: cacheImage)
-            return
-        }
-
-        self.task = ImageDownloader.shared.downloadImage(with: urlString) { result in
+        self.task = ImageManager.shared.retriveImage(with: urlString) { result in
             switch result {
             case .success(let image):
-                cacheManager.saveImage(key: urlString, image: image)
-                return self.loadOnMainScheduler(image: image)
-            case .failure:
+                self.loadOnMainScheduler(image: image)
+            case .failure(let error):
+                print(error.identifier, error.errorMessage)
                 guard let placeholder = placeholder else { return }
-                return self.loadOnMainScheduler(image: placeholder)
+                self.loadOnMainScheduler(image: placeholder)
             }
         }
     }

@@ -1,5 +1,5 @@
 //
-//  ImageDownloadError.swift
+//  ImageError.swift
 //  iOS-malrangBookFinder
 //
 //  Created by 김동욱 on 2022/10/13.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ImageDownloadError: LocalizedError {
+enum ImageError: LocalizedError {
     case unknownError
     case statusCodeError(statusCode: Int)
     case emptyDataError

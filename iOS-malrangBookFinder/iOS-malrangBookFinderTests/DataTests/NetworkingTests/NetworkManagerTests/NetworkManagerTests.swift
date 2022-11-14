@@ -31,7 +31,7 @@ final class NetworkManagerTests: XCTestCase {
     func test_request호출시_httpResponse의_statusCode가_200일때_데이터가_전달되는지() {
         // given
         let promise = expectation(description: "subscribe에 값이 전달되는지")
-        self.mockDataManager.makeRequestSuccessResult()
+        self.mockDataManager.makeSuccessDataResult()
         let endPoint = Endpoint(host: "test")
 
         // when
@@ -50,7 +50,7 @@ final class NetworkManagerTests: XCTestCase {
     func test_request호출시_httpResponse의_statusCode가_400일때_에러를_전달하는지() {
         // given
         let promise = expectation(description: "onError에 에러가 전달되는지")
-        self.mockDataManager.makeRequestFailureResult()
+        self.mockDataManager.makeFailureResult()
         let endPoint = Endpoint(host: "test")
 
         // when

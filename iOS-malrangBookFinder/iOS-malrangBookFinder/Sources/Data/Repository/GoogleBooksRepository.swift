@@ -19,7 +19,7 @@ final class GoogleBooksRepository: GoogleBooksRepositoryProtocol {
         startIndex: Int,
         maxResult: Int
     ) -> Observable<SearchResult> {
-        let endpoint = EndPointStrage.searchBookList(
+        let endpoint = EndpointStorage.searchBookList(
             title: text,
             startIndex: startIndex,
             maxResult: maxResult

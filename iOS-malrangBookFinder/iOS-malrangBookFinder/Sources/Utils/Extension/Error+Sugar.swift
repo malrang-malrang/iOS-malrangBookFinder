@@ -13,7 +13,7 @@ extension Error {
             return String(describing: networkError.self)
         }
 
-        if let imageDownloadError = self as? ImageDownloadError {
+        if let imageDownloadError = self as? ImageError {
             return String(describing: imageDownloadError.self)
         }
 
@@ -29,7 +29,7 @@ extension Error {
             return networkError.errorMessage
         }
 
-        if let imageDownloadError = self as? ImageDownloadError {
+        if let imageDownloadError = self as? ImageError {
             return imageDownloadError.errorMessage
         }
 
